@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+    @apply border-cyan-400
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    z-index: -1;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #d8d8d8;
+opacity: 10px;
+border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb:hover{
+background:  #c9c9c9;
+opacity: 10px;
+border-radius: 10px;
+}
+
+body {
+  height: 100vh;
+}
+
+.rec.rec-arrow {
+  background-color: rgb(53, 57, 57);
+  color: aqua;
+  forced-color-adjust: cyan;
+  
+}
+
+.rec.rec-arrow:hover {
+  background-color: #3b3e3e;
+  color: cyan;
+  padding-bottom: cyan;
+  forced-color-adjust: cyan;
+}
+
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+  
+}
+
+.rec-carousel-item:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px cyan;
+  forced-color-adjust: cyan;
+  background-color: #eaeaea;
+}
+
+
+
+  
