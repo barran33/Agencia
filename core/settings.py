@@ -263,7 +263,7 @@ if not DEBUG:
     #s3 static settings
     STATIC_LOCATION = 'static'
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-    STATICFILES_STORAGE = 'storages_backends.s3boto3.S3BotoStorage'
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3BotoStorage'
 
     # public media settings
     PUBLIC_MEDIA_LOCATION = 'media'
