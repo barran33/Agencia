@@ -3,8 +3,8 @@
 #Exit on error
 set -o errexit
 
-pip install -r requirments.txt
+pip3 install -r requirements.txt
 
-python manage.py collectstatic --no-input
+python3 manage.py collectstatic --no-input
 
 # python manage.py migrate
