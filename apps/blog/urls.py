@@ -10,14 +10,15 @@ urlpatterns = [
     path("search/<str:search_term>",SearchBlogView.as_view()),
     
     path('author_list',AuthorBlogListView.as_view()),
+    path('author_detail/<post_id>', AuthorPostDetailView.as_view()),
     path('edit',EditBlogPostView.as_view()),
     path('draft',DraftBlogPostView.as_view()),
     path('publish',PublishBlogPostView.as_view()),
-    path('delete/<slug>',DeleteBlogPostView.as_view()),
+    path('delete/<post_id>',DeleteBlogPostView.as_view()),
     path('create',CreateBlogPostView.as_view()),
      
     
 ]
- 
+
 
 

@@ -98,6 +98,20 @@ class PostDetailView(APIView):
             return Response({'post': serializer.data}, status=status.HTTP_200_OK)
         else:
             return Response({'error': 'Post doesnt exist'}, status=status.HTTP_404_NOT_FOUND)
+
+
+class AuthorPostDetailView(APIView):
+    permission_classes = (IsPostAuthorOrReadOnly,)
+    def get(self, request, post_id, format=None):
+        if Post.objects.filter(id=post_id).exists():
+
+            post = Post.objects.get(id=post_id)
+            serializer = PostSerializer(post)
+                                                
+
+            return Response({'post': serializer.data}, status=status.HTTP_200_OK)
+        else:
+            return Response({'error': 'Post doesnt exist'}, status=status.HTTP_404_NOT_FOUND)
         
 
 class SearchBlogView(APIView):
@@ -141,11 +155,11 @@ class EditBlogPostView(APIView):
         user = self.request.user
 
         data = self.request.data
-        slug = data['slug']
+        post_id = data['post_id']
 
-        print(data)
         
-        post = Post.objects.get(slug=slug)
+        
+        post = Post.objects.get(id=post_id)
 
         if(data['title']):
             if not (data['title'] == 'undefined'):
@@ -186,9 +200,9 @@ class DraftBlogPostView(APIView):
     permission_classes = (IsPostAuthorOrReadOnly, )
     def put(self, request, format=None):
         data = self.request.data
-        slug = data['slug']
+        post_id = data[' post_id']
 
-        post = Post.objects.get(slug=slug)
+        post = Post.objects.get(id=post_id)
 
         post.status = 'draft'
         post.save()
@@ -199,9 +213,9 @@ class PublishBlogPostView(APIView):
     permission_classes = (IsPostAuthorOrReadOnly, )
     def put(self, request, format=None):
         data = self.request.data
-        slug = data['slug']
+        post_id = data['post_id']
 
-        post = Post.objects.get(slug=slug)
+        post = Post.objects.get(id= post_id)
 
         post.status = 'published'
         post.save()
@@ -210,9 +224,9 @@ class PublishBlogPostView(APIView):
 
 class DeleteBlogPostView(APIView):
     permission_classes = (IsPostAuthorOrReadOnly, )
-    def delete(self, request, slug, format=None):
+    def delete(self, request, post_id, format=None):
         
-        post = Post.objects.get(slug=slug)
+        post = Post.objects.get(id= post_id)
 
         post.delete()
 
