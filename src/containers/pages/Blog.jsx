@@ -81,4 +81,5 @@ export default connect(mapStateToProps,{
     get_categories,
     get_blog_list,
     get_blog_list_page
+    
 }) (Blog)
