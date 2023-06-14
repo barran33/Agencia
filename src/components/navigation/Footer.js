@@ -1,5 +1,5 @@
 import { connect } from "react-redux"
-import logo_magic3 from 'assets/img/magic3.png'
+
 const navigation = {
     solutions: [
       { name: 'Marketing', href: '#' },
@@ -98,9 +98,9 @@ function Footer(){
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8 xl:col-span-1">
             <img 
-                src={logo_magic3}
-                width={270}
-                height={240} 
+                src={'https://bafybeifbthqhc63mivqixm6qvnuttfomcc7qcmmd2u7vv5sgj5glj5cdzq.ipfs.w3s.link/magic3.png'}
+                width={240}
+                height={210} 
                 className=""/>
               <p className="text-base text-gray-500">
                Vamos a Encontrar la frecuencia Cosmica que nos haga entrar en Armonia con el universo

@@ -10,13 +10,13 @@ import { Typewriter } from "react-simple-typewriter"
             <div>
               <div>
                 <h1 className="text-4xl mt-12 font-bold tracking-tight pb-18 sm:text-center sm:text-6xl">
-                   Co§mic <span> </span>
+                Co§mic <span> </span>
                    <div className="inline-flex" style={{ color: 'cyan', fontWeight: 'bold' }}>
                       <Typewriter
                             words={[ 'Imagination!']}
                             loop={0}
                             cursor
-                            cursorStyle='_'
+                            cursorStyle=''
                             typeSpeed={70}
                             deleteSpeed={50}
                             delaySpeed={1000}

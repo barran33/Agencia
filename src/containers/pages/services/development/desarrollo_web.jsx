@@ -7,8 +7,12 @@ import TechStack from "components/services/desarrollo_web/TechStack";
 import OurClients from "components/services/desarrollo_web/OurClients";
 import CasesList from "components/cosmovisión/CasesList";
 import Contact from "components/Contact";
+import { useEffect } from "react";
 
 function DesarrolloWeb(){
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
     return(
         <Layout>
             <Navbar/>

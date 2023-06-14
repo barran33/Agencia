@@ -5,8 +5,12 @@ import Solution from "components/cosmovisión/espiritual/Solution"
 import Footer from "components/navigation/Footer"
 import Navbar from "components/navigation/Navbar"
 import Layout from "hocs/layouts/Layout"
+import { useEffect } from "react"
 
 function Espiritual(){
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
     return(
         <div>
             <Layout>

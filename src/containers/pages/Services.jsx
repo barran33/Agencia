@@ -10,26 +10,24 @@ import { Helmet } from "react-helmet-async"
 const posts_software = [
   {
       title: 'Desarrollo Web',
-      img: coding_img,
+      img: 'https://bafybeibec2v5zu5a75qvm4z3q7g3llfno3jjvihcvs7l53d6ogbxd3yrb4.ipfs.w3s.link/progra.png',
       href: '/servicios/desarrollo_web',
       category: { name: 'Programaciòn', href: '#' },
       description:
         '¡Da vida a tus ideas con el servicio profesional y peronalizado de desarrollo web  que tenemos en Co§mic Imagination! ',
       date: 'Feb 12, 2020',
       datetime: '2020-02-12',
-      imageUrl:
-        'https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+      
       readingTime: '11 min',
       author: {
         name: 'Daniela Metz',
         href: '#',
-        imageUrl:
-          'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        
       },
     },
     {
       title: 'Ciber Seguridad',
-      img: coding_img,
+      img: 'https://bafybeidmsk3satfw5ehwtsvosaa7kjypq4gaid3qc4t5suf267xmmzi7ku.ipfs.w3s.link/codificacion.png',
       href: '/servicios/security',
       category: { name: 'Ciber Security', href: '#' },
       description:
@@ -48,7 +46,7 @@ const posts_software = [
     },
     {
       title: 'Marketing',
-      img: coding_img,
+      img: 'https://bafybeicrvnzqkhakdhkqf4blekpxmbl22hu2gpttsvpo2tmzb34eicumku.ipfs.w3s.link/marketing-online.png',
       href: '/servicios/marketing',
       category: { name: 'Marketing', href: '#' },
       description:
@@ -79,13 +77,13 @@ function Services(){
                 <meta name="description" content="Agencia de Software , Ciencia y Espiritualidad. Creamos paginas web y desarrollamos aplicaciones unicas con esencia y autenticidad" />
                 <meta name="keywords" content='Agencia de software, desarrollo de WebApps' />
                 <meta name="robots" content='all' />
-                <link rel="canonical" href="https://www.CosmicImagination.com/" />
+                <link rel="canonical" href="https://www.cosmic-imagination.com/" />
                 <meta name="author" content='Cosmic_Imagination' />
                 <meta name="publisher" content='Cosmic_Imagination' />
                 {/* Social Media Tags */}
                 <meta property="og:title" content='Co§mIc | Software Agency' />
                 <meta property="og:description" content='Agencia de Software , Ciencia y Espiritualidad. Creamos paginas web y desarrollamos aplicaciones unicas con esencia y autenticidad' />
-                <meta property="og:url" content="https://www.CosmicImagination.com/" />
+                <meta property="og:url" content="https://www.cosmic-imagination.com/" />
                 <meta property="og:image" content='https://thumbs.dreamstime.com/z/s%C3%ADmbolo-de-la-alquimia-y-de-la-geometr%C3%ADa-sagrada-en-el-fondo-azul-de-la-acuarela-76843935.jpg' />
 
                 <meta name="twitter:title" content='Co§mIc | Software Agenc' />

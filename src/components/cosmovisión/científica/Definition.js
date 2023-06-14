@@ -107,7 +107,7 @@ import {
                 <rect width={784} height={404} fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
               </svg>
               <img
-                className="relative mx-auto"
+                className="relative mx-auto mt-12"
                 width={490}
                 src="https://bafybeieohobmxpqfwzww2vpr674a5ht2n4mrnuxhkclzswdqps7lnx5p3m.ipfs.w3s.link/693.jpeg"
                 alt=""
