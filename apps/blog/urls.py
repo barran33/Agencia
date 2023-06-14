@@ -16,8 +16,7 @@ urlpatterns = [
     path('publish',PublishBlogPostView.as_view()),
     path('delete/<post_id>',DeleteBlogPostView.as_view()),
     path('create',CreateBlogPostView.as_view()),
-     
-    
+        
 ]
 
 
