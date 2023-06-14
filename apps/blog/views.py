@@ -200,7 +200,7 @@ class DraftBlogPostView(APIView):
     permission_classes = (IsPostAuthorOrReadOnly, )
     def put(self, request, format=None):
         data = self.request.data
-        post_id = data[' post_id']
+        post_id = data['post_id']
 
         post = Post.objects.get(id=post_id)
 
