@@ -1,4 +1,4 @@
-import Cosmic from 'assets/img/cosmic.jpg'
+
 const stats = [
     { label: 'Founded', value: '2021' },
     { label: 'Employees', value: '5' },
@@ -40,7 +40,7 @@ const stats = [
               <div className="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl">
                 <img
                   className="absolute inset-0 h-full w-full object-cover"
-                  src={Cosmic}
+                  src='https://bafybeiesg3rkrhlrzawkzir7db622t4wfaxbcmygmkd47xxj6rxrwc66fa.ipfs.w3s.link/cosmic.jpg'
                   alt=""
                 />
                 <div className="absolute inset-0 bg-cyan-500 mix-blend-multiply" />
