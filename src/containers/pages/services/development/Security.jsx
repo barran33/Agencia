@@ -70,7 +70,7 @@ function Security(){
                                     </div>
                                     <div className="ml-4">
                                         <div className="text-base font-medium text-black">Jorge Barrantes</div>
-                                        <div className="text-base font-medium text-gray-500">CEO, Co§mic Imagination</div>
+                                        <div className="text-base font-medium text-gray-500">Founder & CEO, Co§mic Imagination</div>
                                     </div>
                                     </div>
                                 </footer>

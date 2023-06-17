@@ -141,20 +141,20 @@ function Contact(){
                 <dt className="sr-only">Phone number</dt>
                 <dd className="flex">
                   <PhoneIcon className="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
-                  <span className="ml-3">+1 (555) 123-4567</span>
+                  <span className="ml-3">+506 8847-4150</span>
                 </dd>
               </div>
               <div className="mt-3">
                 <dt className="sr-only">Email</dt>
                 <dd className="flex">
                   <EnvelopeIcon className="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
-                  <span className="ml-3">support@example.com</span>
+                  <span className="ml-3">support (mail@cosmicimagination.awsapps.com)</span>
                 </dd>
               </div>
             </dl>
             <p className="mt-6 text-base text-gray-500">
               Looking for careers?{' '}
-              <a href="#" className="font-medium text-gray-700 underline">
+              <a href="especialistas" className="font-medium text-gray-700 underline">
                 View all job openings
               </a>
               .

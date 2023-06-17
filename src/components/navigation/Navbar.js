@@ -9,37 +9,37 @@ import { DotLoader } from 'react-spinners'
 const solutions = [
     {
       name: 'Cosmovisión',
-      description: 'Measure actions your users take',
+      description: 'Observa nuestra forma de ver el mundo...',
       href: '/cosmovisión',
       icon: SparklesIcon,
     },
     {
       name: 'Servicios',
-      description: 'Create your own targeted content',
+      description: '  Mira nuestros servicios.',
       href: '/servicios',
       icon: CommandLineIcon,
     },
     {
       name: 'Nosotros',
-      description: 'Keep track of your growth',
+      description: 'Lee más sobre nostros.',
       href: '/nosotros',
       icon: IdentificationIcon,
     },
     {
       name: 'Especialistas',
-      description: 'Keep track of your growth',
+      description: 'Conoce nuestro grupo de profesionales.',
       href: '/especialistas',
       icon: ComputerDesktopIcon,
     },
     {
       name: 'Blog',
-      description: 'Keep track of your growth',
+      description: 'Aprende más sobre Co§mic Imagiantion.',
       href: '/blog',
       icon: BookOpenIcon,
     },
     {
       name: 'Contacto',
-      description: 'Keep track of your growth',
+      description: 'Contáctanos en un instante! ',
       href: '/contacto',
       icon: ChatBubbleLeftEllipsisIcon,
     },

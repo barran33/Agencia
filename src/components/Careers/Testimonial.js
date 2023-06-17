@@ -36,7 +36,7 @@ function Testimonial(){
                 
                 <footer className="mt-6"> 
                   <p className="text-base font-medium text-gray-900">Hermes_4:20</p>
-                  <p className="text-base font-medium text-white-900">Fundador y CEO de Co§mic Imagination </p>
+                  <p className="text-base font-medium text-white-900">Founder & CEO, Co§mic Imagination </p>
                 </footer>
               </blockquote>
             </div>
