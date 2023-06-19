@@ -24,7 +24,7 @@ const incentives = [
           <div className="mx-auto max-w-2xl px-4 lg:max-w-none">
             <div className="max-w-3xl">
               <h2 className="text-4xl font-bold tracking-tight text-gray-900">
-                Unificamos el conocimiento científico y espiritual para mejorar el bienestar del Cosmos en Genaral
+                Unificamos el conocimiento científico y espiritual para mejorar el bienestar del Cosmos en General
               </h2>
               <p className="mt-4 text-gray-500">
               La tecnología es una extensión de nuestra capacidad humana, pero es nuestra sabiduría espiritual la que guía su uso para el bienestar de todos.
