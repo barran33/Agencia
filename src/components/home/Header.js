@@ -50,8 +50,7 @@ import { Typewriter } from "react-simple-typewriter"
           </div>
               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073"
               crossorigin="anonymous">
-              </script>
-          <meta name="google-adsense-account" content="ca-pub-6903011312899073"></meta>
+              </script>         
         </div>
       </main>
     )
