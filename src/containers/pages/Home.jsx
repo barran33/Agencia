@@ -36,6 +36,19 @@ function Home(){
                 
             </div>
             </div>
+            
+                <html lang="en">
+                <head>
+                   
+
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073"
+                    crossorigin="anonymous"></script>
+                </head>
+                <body>
+                   
+                </body>
+                </html>
+
                 
             </div>      
              <Footer/>
