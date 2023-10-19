@@ -3,20 +3,6 @@ import { Typewriter } from "react-simple-typewriter"
 
  
  function Header(){
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073";
-    script.crossOrigin = "anonymous";
-    document.head.appendChild(script);
-    return () => {
-      // Limpieza: elimina el script cuando el componente se desmonte
-      document.head.removeChild(script);
-    };
-  }, []); // El arreglo vacío [] asegura que useEffect se ejecute solo una vez, equivalente a componentDidMount
-
-  // Resto de tu componente Header
-}
-{
     return(
         <main>
         <div className="relative ">
@@ -61,10 +47,14 @@ import { Typewriter } from "react-simple-typewriter"
             <div className="absolute inset-x-0 top-[calc(100%-20rem)] -z-10 transform-gpu overflow-hidden bg-white blur-lg lg:top-[calc(100%-45rem)] sm:top-[calc(100%-40rem)]">
               <img src="https://thumbs.dreamstime.com/z/s%C3%ADmbolo-de-la-alquimia-y-de-la-geometr%C3%ADa-sagrada-en-el-fondo-azul-de-la-acuarela-76843935.jpg" className='w-full h-full object-cover'/>
             </div>
-            <div>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073"
-            crossorigin="anonymous"></script>
-            </div>
+            <html lang="en">
+                <head>
+                   
+
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073"
+                    crossorigin="anonymous"></script>
+                </head>
+                </html>
           </div>         
         </div>
       </main>
