@@ -38,12 +38,6 @@ import { Typewriter } from "react-simple-typewriter"
                            Ciencia&Espiritualidad
                         </Link> 
                     </li>
-                    <li className='inline-flex border-b-2 border-transparent hover:border-cyan-400 transition duration-300 ease-in-out'>
-                        <Link to='/category/ciencia_espiritual' className="mt-6 text-2xl font-medium leading-8 text-gray-900 sm:text-center">
-                           Marketing
-                        </Link> 
-                    </li>
-                    
                   </ul>
               </div>
               <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden bg-white blur-lg sm:top-[calc(100%-30rem)]">
@@ -51,16 +45,14 @@ import { Typewriter } from "react-simple-typewriter"
             </div>
             <div className="absolute inset-x-0 top-[calc(100%-20rem)] -z-10 transform-gpu overflow-hidden bg-white blur-lg lg:top-[calc(100%-45rem)] sm:top-[calc(100%-40rem)]">
               <img src="https://thumbs.dreamstime.com/z/s%C3%ADmbolo-de-la-alquimia-y-de-la-geometr%C3%ADa-sagrada-en-el-fondo-azul-de-la-acuarela-76843935.jpg" className='w-full h-full object-cover'/>
-              <head>
-                   
-
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073"
-                    crossorigin="anonymous"></script>
-                </head>
-                <meta name="google-adsense-account" content="ca-pub-6903011312899073"></meta>
+              
             </div>
 
-            
+            <div>     
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073"
+                    crossorigin="anonymous"></script>
+            </div>
+                <meta name="google-adsense-account" content="ca-pub-6903011312899073"></meta>
                 
           </div>         
         </div>
