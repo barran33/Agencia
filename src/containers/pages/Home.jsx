@@ -37,7 +37,12 @@ function Home(){
             </div>
             
                 
-            </div>      
+            </div>
+            <div>     
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073"
+                    crossorigin="anonymous"></script>
+            </div>
+                <meta name="google-adsense-account" content="ca-pub-6903011312899073"></meta>      
              <Footer/>
            
         </Layout>
