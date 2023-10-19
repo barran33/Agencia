@@ -38,6 +38,11 @@ import { Typewriter } from "react-simple-typewriter"
                            Ciencia&Espiritualidad
                         </Link> 
                     </li>
+                    <li className='inline-flex border-b-2 border-transparent hover:border-cyan-400 transition duration-300 ease-in-out'>
+                        <Link to='/category/ciencia_espiritual' className="mt-6 text-2xl font-medium leading-8 text-gray-900 sm:text-center">
+                           Marketing
+                        </Link> 
+                    </li>
                     
                   </ul>
               </div>
