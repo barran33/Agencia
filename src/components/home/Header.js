@@ -51,8 +51,7 @@ import { Typewriter } from "react-simple-typewriter"
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073"
             crossorigin="anonymous"></script>
             </div>
-          </div>
-                 
+          </div>         
         </div>
       </main>
     )
