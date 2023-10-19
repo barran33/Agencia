@@ -7,6 +7,7 @@ import { Typewriter } from "react-simple-typewriter"
         <main>
         <div className="relative ">
         <div className="mx-auto max-w-full xl:mx-12 xl:pt-40 xl:pb-64 lg:pt-40 lg:pb-48 pt-24 pb-12">
+        <meta name="google-adsense-account" content="ca-pub-6903011312899073"></meta>
             <div>
               <div>
                 <h1 className="text-4xl mt-12 font-bold tracking-tight pb-18 sm:text-center sm:text-6xl">
@@ -52,11 +53,6 @@ import { Typewriter } from "react-simple-typewriter"
                 
           </div>         
         </div>
-        <div>     
-               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073"
-                crossorigin="anonymous"></script>
-        </div>
-        <meta name="google-adsense-account" content="ca-pub-6903011312899073"></meta>
       </main>
     )
  }
