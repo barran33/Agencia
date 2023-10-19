@@ -38,6 +38,7 @@ import { Typewriter } from "react-simple-typewriter"
                            Ciencia&Espiritualidad
                         </Link> 
                     </li>
+                    
                   </ul>
               </div>
               <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden bg-white blur-lg sm:top-[calc(100%-30rem)]">
@@ -47,6 +48,12 @@ import { Typewriter } from "react-simple-typewriter"
               <img src="https://thumbs.dreamstime.com/z/s%C3%ADmbolo-de-la-alquimia-y-de-la-geometr%C3%ADa-sagrada-en-el-fondo-azul-de-la-acuarela-76843935.jpg" className='w-full h-full object-cover'/>
             </div>
           </div>
+          <head>
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073"
+              crossorigin="anonymous">
+              </script>
+          </head>
+          <meta name="google-adsense-account" content="ca-pub-6903011312899073"></meta>
         </div>
       </main>
     )
