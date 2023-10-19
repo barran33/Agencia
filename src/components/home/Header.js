@@ -1,8 +1,22 @@
- import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { Typewriter } from "react-simple-typewriter"
 
  
  function Header(){
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073";
+    script.crossOrigin = "anonymous";
+    document.head.appendChild(script);
+    return () => {
+      // Limpieza: elimina el script cuando el componente se desmonte
+      document.head.removeChild(script);
+    };
+  }, []); // El arreglo vacío [] asegura que useEffect se ejecute solo una vez, equivalente a componentDidMount
+
+  // Resto de tu componente Header
+}
+{
     return(
         <main>
         <div className="relative ">

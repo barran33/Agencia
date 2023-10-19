@@ -23,6 +23,9 @@ function Home(){
             {/* We've used 3xl here, but feel free to try other max-widths based on your needs */}
             <div className="mx-auto max-w-1700">
                 {/* Content goes here */}
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073"
+                crossorigin="anonymous"></script>
+            
             
                 <Header/>
                 <Incentives/>
@@ -33,9 +36,7 @@ function Home(){
                 
             </div>
             </div>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903011312899073"
-                crossorigin="anonymous"></script>
-            
+                
             </div>      
              <Footer/>
            
