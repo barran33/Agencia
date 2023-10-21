@@ -1,7 +1,7 @@
 const posts = [
   {
       id:'1234-qwer',
-    title: 'ciencia',
+    title: 'Ciencia',
     href: '/cosmovisión/científica',
     category: { name: 'Magia' },
     description:
@@ -9,7 +9,7 @@ const posts = [
     date: 'Jun 9, 2023',
     datetime: '2023-06-9',
     imageUrl:
-      'https://bafybeif2gs5r5o36fmx7c74s54rwdaqwpco5dwb2jpk3gaeac42rw7hfem.ipfs.w3s.link/939.jpeg',
+      'https://bafybeicy2ooqiqtprupkx6rm7tvz5owhzvclmw3wb2svhontwe4fiskeyq.ipfs.w3s.link/33.jpeg',
     readingTime: '6 min',
     author: {
       name: '',
@@ -29,7 +29,7 @@ const posts = [
     date: 'Jun 9, 2023',
     datetime: '2023-06-09',
     imageUrl:
-      'https://bafybeigt4xmb7vi2rwm66gze6mukvsxre2duntyjllj4l3gnch4zbyzgru.ipfs.w3s.link/universe.png',
+      'https://bafybeidcu6fqzop5vj6qu4vhdo7idcailfjddzjszepyuj6g6rhm6c2zzu.ipfs.w3s.link/Spiritual.jpeg',
     readingTime: '6 min',
     author: {
       
@@ -40,7 +40,7 @@ const posts = [
   },
   {
       id:'4321-zxcv',
-    title: '',
+    title: 'Cosmos',
     href: '/cosmovisión/universal',
     category: { name: 'magia', href: '/cosmovisión/universal' },
     description:
@@ -48,7 +48,7 @@ const posts = [
     date: 'Jun 9, 2023',
     datetime: '2023-06-09',
     imageUrl:
-      'https://bafybeihhfisfvljzn6mi3jgzmwswis3iee7dz6qkhp4skx5ywivddxcvii.ipfs.w3s.link/universe3.jpeg',
+      'https://bafybeifcb2dex25wa7nivtujmggidumjnlvrhyt4ul2gwdszvfut57kqum.ipfs.w3s.link/cosmos.jpeg',
     readingTime: '6 min',
     author: {
       
