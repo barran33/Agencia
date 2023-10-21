@@ -49,7 +49,6 @@ import { Typewriter } from "react-simple-typewriter"
               
             </div>
 
-           
                 
           </div>         
         </div>
