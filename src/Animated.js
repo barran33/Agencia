@@ -48,7 +48,7 @@ function Animated(){
             <Route path="/contacto" element={<Contact/>}/>   
             <Route path="/ebook" element={<Optin/>}/> 
             <Route path="/ebook/training" element={<OptinCTA />} />
-            <Route path="/ads.txt"/> 
+            
             
             </Routes>
         </AnimatePresence>
