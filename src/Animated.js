@@ -20,7 +20,7 @@ import CosmoVisión from "containers/pages/Cosmovisión";
 import Security from "containers/pages/services/development/Security";
 import DesarrolloWeb from "containers/pages/services/development/desarrollo_web";
 import Marketing from "containers/pages/services/development/Marketing";
-
+import ads from 'containers/pages/Ads'
 
 function Animated(){
     const location = useLocation()
@@ -48,6 +48,7 @@ function Animated(){
             <Route path="/contacto" element={<Contact/>}/>   
             <Route path="/ebook" element={<Optin/>}/> 
             <Route path="/ebook/training" element={<OptinCTA />} />
+            <Route path="/ads.txt" element={<ads.txt/>}/> 
             
             </Routes>
         </AnimatePresence>
