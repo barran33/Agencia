@@ -20,7 +20,7 @@ import CosmoVisión from "containers/pages/Cosmovisión";
 import Security from "containers/pages/services/development/Security";
 import DesarrolloWeb from "containers/pages/services/development/desarrollo_web";
 import Marketing from "containers/pages/services/development/Marketing";
-import ads from 'containers/pages/Ads'
+import ads from 'containers/pages/Ads/ads.txt'
 
 function Animated(){
     const location = useLocation()
