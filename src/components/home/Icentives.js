@@ -7,7 +7,7 @@ const incentives = [
     {
       name: 'Espiritualidad',
       imageSrc: 'https://bafybeid4g63jyjr7wbuktr6jpd6dpah2zslwtpfcm25o5xad4n65potct4.ipfs.w3s.link/396.png',
-      description: "La ciencia sin espiritualidad es coja, la espiritualidad sin ciencia es ciega.",
+      description: "La espiritualidad nos conecta con la esencia del universo, y la ciencia nos desvela sus secretos.",
     },
     {
       name: 'Tecnología',
@@ -23,13 +23,13 @@ const incentives = [
         <div className="mx-auto  py-24  sm:py-32 l">
           <div className="mx-auto max-w-2xl px-4 lg:max-w-none">
             <div className="max-w-3xl">
-              <h2 className="text-4xl font-bold tracking-tight text-gray-900">
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900">
                 Unificamos el conocimiento científico y espiritual para mejorar el bienestar del Cosmos en General
-              </h2>
-              <p className="mt-4 text-gray-500">
+              </h1>
+              <h2 className="mt-4 text-gray-500">
               La tecnología es una extensión de nuestra capacidad humana, pero es nuestra sabiduría espiritual la que guía su uso para el bienestar de todos.
               La ciencia despierta nuestra curiosidad, la espiritualidad despierta nuestra conciencia
-              </p>
+              </h2>
               
             </div>
             <div className="mt-16 grid grid-cols-1 gap-y-10 gap-x-8 lg:grid-cols-3">

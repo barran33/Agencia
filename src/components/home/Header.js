@@ -28,15 +28,15 @@ import { Typewriter } from "react-simple-typewriter"
                   
                 </h1>
                
-                  <ul className='flex gap-8 items-center justify-center pt-19 '>
+                  <ul className='flex gap-4 items-center justify-center pt-19 '>
                     <li className='inline-flex border-b-2 border-transparent hover:border-cyan-400 transition duration-300 ease-in-out'>
-                        <Link to='/category/programacion' className="mt-6 text-2xl font-medium leading-8 text-gray-900 sm:text-center">
+                        <Link to='/category/programacion' className="mt-6 text-xl font-medium leading-8 text-gray-900 sm:text-center">
                             Programación
                         </Link>
                     </li>                   
                     <li className='inline-flex border-b-2 border-transparent hover:border-cyan-400 transition duration-300 ease-in-out'>
-                        <Link to='/category/ciencia_espiritual' className="mt-6 text-2xl font-medium leading-8 text-gray-900 sm:text-center">
-                           Ciencia&Espiritualidad
+                        <Link to='/category/ciencia_espiritual' className="mt-6 text-xl font-medium leading-8 text-gray-900 sm:text-center">
+                           Ciencia & Espiritualidad
                         </Link> 
                     </li>
                   </ul>

@@ -67,9 +67,9 @@ const posts = [
         <div className="relative mx-auto lg:mx-12 max-w-full">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"></h2>
-            <p className="mx-auto mt-3 max-w-2xl text-2xl text-gray-900 sm:mt-4">
+            <h1 className="mx-auto mt-3 max-w-2xl text-2xl text-gray-900 sm:mt-4">
             El cosmos es el laboratorio en el que la ciencia y la espiritualidad convergen, revelando la interconexión de todas las cosas y la infinita inteligencia de la consciencia Universal
-            </p>
+            </h1>
           </div>
           <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
             {posts.map((post) => (

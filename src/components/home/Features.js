@@ -23,7 +23,7 @@ export default function Features() {
       <div className="mx-auto  max-w-full py-16 px-4 sm:px-6 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:py-24 ">
         <div>
           <h2 className="text-lg font-semibold text-cyan-400">Everything you need</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900">All-in-one platform</p>
+          <h3 className="mt-2 text-3xl font-bold tracking-tight text-gray-900">All-in-one platform</h3>
           <p className="mt-4 text-lg text-gray-500">
             Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.
           </p>
