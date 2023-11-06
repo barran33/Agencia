@@ -13,7 +13,7 @@ const incentives = [
       name: 'Tecnología',
       imageSrc: 'https://bafybeicjuyisq7olx2rhpxjx77bud365bdqdq5tb7hsenilpsk7buexrjq.ipfs.w3s.link/99.png',
       description:
-        "La tecnología es solo una herramienta, pero puede ser utilizada para llevar a cabo grandes cosas cuando se combina con la sabiduría espiritual",
+        "La ciencia y la tecnología son solo una herramienta, pero puede ser utilizada para llevar a cabo grandes cosas cuando se combina con la sabiduría espiritual",
     },
   ]
   
@@ -26,11 +26,9 @@ const incentives = [
               <h1 className="text-4xl font-bold tracking-tight text-gray-900">
                 Unificamos el conocimiento científico y espiritual para mejorar el bienestar del Cosmos en General
               </h1>
-              <h2 className="mt-4 text-gray-500">
-              La tecnología es una extensión de nuestra capacidad humana, pero es nuestra sabiduría espiritual la que guía su uso para el bienestar de todos.
-              La ciencia despierta nuestra curiosidad, la espiritualidad despierta nuestra conciencia
-              </h2>
-              
+              <h1 className="mt-4 text-gray-500">La tecnología es una extensión de nuestra capacidad humana, pero es nuestra sabiduría espiritual la que guía su uso para el bienestar de todos.</h1>
+              <h1 className="mt-4 text-gray-500">La ciencia despierta nuestra curiosidad, la espiritualidad despierta nuestra conciencia</h1>
+              <h1 className="mt-4 text-gray-500">En el despertar espiritual, el alma se encuentra con la conciencia y se dan cuenta de que son una y la misma.</h1>
             </div>
             <div className="mt-16 grid grid-cols-1 gap-y-10 gap-x-8 lg:grid-cols-3">
               {incentives.map((incentive) => (
