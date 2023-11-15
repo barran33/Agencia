@@ -9,7 +9,7 @@ function Testimonial(){
               <div className="aspect-w-10 aspect-h-6 overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
                 <img
                   className="object-cover  lg:h-full  lg:w-full"
-                  src="https://bafybeiaf72osqswuz4co4qbdoj6cnqkztog4mcihoilv6ulqqx426jdmki.ipfs.w3s.link/hdsiajkl.jpeg"
+                  src="https://bafybeidqakv2q7wss7xb5lebjwksjlbwouk3vtvirad4b3yywsljzep4bm.ipfs.w3s.link/george.jpeg"
                   alt=""
                 />
               </div>
