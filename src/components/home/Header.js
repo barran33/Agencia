@@ -22,7 +22,7 @@ import { Typewriter } from "react-simple-typewriter"
                             deleteSpeed={50}
                             delaySpeed={1000}
                             //onLoopDone={handleDone}
-                            //onType={handleType}
+                          //onType={handleType}
                       />
                    </div>
                   
