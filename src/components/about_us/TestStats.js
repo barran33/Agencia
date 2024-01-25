@@ -1,9 +1,9 @@
 
 const stats = [
     { label: 'Founded', value: '2021' },
-    { label: 'Employees', value: '5' },
-    { label: 'Beta Users', value: '521' },
-    { label: 'Raised', value: '$25M' },
+    { label: 'Employees', value: '6' },
+    { label: 'Beta Users', value: '369' },
+    { label: 'Raised', value: '$39M' },
   ]
   
   export default function TestStats() {
