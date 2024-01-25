@@ -6,6 +6,7 @@ const stats = [
     { label: 'Raised', value: '$39M' },
   ]
   
+  
   export default function TestStats() {
     return (
       <div className="relative bg-white py-16 sm:py-24">
