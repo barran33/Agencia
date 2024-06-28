@@ -57,7 +57,7 @@ function CategoriesHeader({categories}){
         </div>
         <input
             id='search'
-            name='search'
+                    name='search'
             value={term}           
             onChange={(e)=>handleChange(e)}
             type='search'

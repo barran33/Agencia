@@ -63,7 +63,7 @@ function Blog({
                     <BlogList posts={posts&&posts} get_blog_list_page={get_blog_list_page} count={count&&count}/>
                     </div>
                 </div>
-            </div>
+            </div> 
                 <Footer/>
         </Layout>
     )
