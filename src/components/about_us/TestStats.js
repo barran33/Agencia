@@ -1,6 +1,6 @@
 
 const stats = [
-    { label: 'Founded', value: '2021' },
+    { label: 'Founded', value: '2022' },
     { label: 'Employees', value: '6' },
     { label: 'Beta Users', value: '369' },
     { label: 'Raised', value: '$39M' },
