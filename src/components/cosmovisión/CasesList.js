@@ -8,33 +8,36 @@ function CasesList(){
     const posts = [
         {
             id:'4321-zxcv',
-          title: 'Científica...',
+          title: 'Científica',
           href: '/cosmovisión/científica',  
           category: { name: 'Científica' },        
           description:
             'La convergencia de la física cuántica, la cimática y la psicología transpersonal...',
-          date: 'Feb 12, 2020',
+          date: 'Feb 12, 2022',
           datetime: '2020-02-12',
           imageUrl:
-          ' https://bafybeif2gs5r5o36fmx7c74s54rwdaqwpco5dwb2jpk3gaeac42rw7hfem.ipfs.w3s.link/939.jpeg',      
+
+          ' https://bafybeigfryyvmifarjfvkajnbssj6xdfvnlxyeqdj654wbkcl533ejieoe.ipfs.w3s.link/693420.jpeg ',
+                
         },
-                      
+
+                 
         {
             id:'5678-asdf',
-          title: 'Espiritual...',
+          title: 'Espiritual.',
           href: '/cosmovisión/espiritual',         
           description:
             'Un Enfoque Integrador de la Geometría Sagrada, la Alquimia Occidental y la Metafísica...',
           date: 'Mar 10, 2020',
           datetime: '2020-03-10',
           imageUrl:
-          '    https://bafybeigt4xmb7vi2rwm66gze6mukvsxre2duntyjllj4l3gnch4zbyzgru.ipfs.w3s.link/universe.png',          
+          ' https://bafybeibguaqdn4pkvxvtjj7zair67sndmg6skdkcqbizytpmyxksfoxomq.ipfs.w3s.link/spitural.jpeg',          
          
         },
         
         {
           id:'3567-cdfs',
-        title: 'Universal...',
+        title: 'Universal.',
         href: '/cosmovisión/universal',
         category: { name: 'Universal' },           
         description:
@@ -42,7 +45,7 @@ function CasesList(){
         date: 'Mar 16, 2020',
         datetime: '2020-03-16',
         imageUrl:
-          'https://bafybeihhfisfvljzn6mi3jgzmwswis3iee7dz6qkhp4skx5ywivddxcvii.ipfs.w3s.link/universe3.jpeg', 
+          'https://bafybeibinu3x5m5br4e5ykvrnizoiai7bqon3n7jjusgihpaajnltfcd4u.ipfs.w3s.link/fractal420.jpg', 
       },   
      
       ]

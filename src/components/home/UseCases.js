@@ -9,7 +9,7 @@ const posts = [
     date: 'Jun 9, 2023',
     datetime: '2023-06-9',
     imageUrl:
-      'https://bafybeicy2ooqiqtprupkx6rm7tvz5owhzvclmw3wb2svhontwe4fiskeyq.ipfs.w3s.link/33.jpeg',
+      'https://bafybeigfryyvmifarjfvkajnbssj6xdfvnlxyeqdj654wbkcl533ejieoe.ipfs.w3s.link/693420.jpeg',
     readingTime: '6 min',
     author: {
       name: '',
@@ -29,7 +29,7 @@ const posts = [
     date: 'Jun 9, 2023',
     datetime: '2023-06-09',
     imageUrl:
-      'https://bafybeidcu6fqzop5vj6qu4vhdo7idcailfjddzjszepyuj6g6rhm6c2zzu.ipfs.w3s.link/Spiritual.jpeg',
+      'https://bafybeibguaqdn4pkvxvtjj7zair67sndmg6skdkcqbizytpmyxksfoxomq.ipfs.w3s.link/spitural.jpeg',
     readingTime: '6 min',
     author: {
       
@@ -48,7 +48,7 @@ const posts = [
     date: 'Jun 9, 2023',
     datetime: '2023-06-09',
     imageUrl:
-      'https://bafybeifcb2dex25wa7nivtujmggidumjnlvrhyt4ul2gwdszvfut57kqum.ipfs.w3s.link/cosmos.jpeg',
+      'https://bafybeibinu3x5m5br4e5ykvrnizoiai7bqon3n7jjusgihpaajnltfcd4u.ipfs.w3s.link/fractal420.jpg',
     readingTime: '6 min',
     author: {
       
