@@ -12,7 +12,7 @@ function CasesList(){
           href: '/cosmovisión/científica',  
           category: { name: 'Científica' },        
           description:
-            'La convergencia de la física cuántica, la cimática y la psicología transpersonal...',
+            'Convergencia de la física cuántica, la cimática y la Psicología transpersonal...',
           date: 'Feb 12, 2022',
           datetime: '2020-02-12',
           imageUrl:
