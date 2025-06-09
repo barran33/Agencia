@@ -98,13 +98,13 @@ function Contact(){
                 <meta name="description" content="Agencia de Software , Ciencia y Espiritualidad. Creamos paginas web y desarrollamos aplicaciones unicas con esencia y autenticidad" />
                 <meta name="keywords" content='Agencia de software, desarrollo de WebApps' />
                 <meta name="robots" content='all' />
-                <link rel="canonical" href="https://www.CosmicImagination.com/" />
+                <link rel="canonical" href="https://www.cosmic-imagination.com/" />
                 <meta name="author" content='Cosmic_Imagination' />
                 <meta name="publisher" content='Cosmic_Imagination' />
                 {/* Social Media Tags */}
                 <meta property="og:title" content='Co§mIc | Software Agency' />
                 <meta property="og:description" content='Agencia de Software , Ciencia y Espiritualidad. Creamos paginas web y desarrollamos aplicaciones unicas con esencia y autenticidad' />
-                <meta property="og:url" content="https://www.CosmicImagination.com/" />
+                <meta property="og:url" content="https://www.cosmic-imagination.com/" />
                 <meta property="og:image" content='https://thumbs.dreamstime.com/z/s%C3%ADmbolo-de-la-alquimia-y-de-la-geometr%C3%ADa-sagrada-en-el-fondo-azul-de-la-acuarela-76843935.jpg' />
 
                 <meta name="twitter:title" content='Co§mIc | Software Agenc' />
@@ -133,8 +133,8 @@ function Contact(){
               <div>
                 <dt className="sr-only">Postal address</dt>
                 <dd>
-                  <p>742 Evergreen Terrace</p>
-                  <p>Springfield, OR 12345</p>
+                  <p>Grecia </p>
+                  <p>Alajuela, Costa Rica</p>
                 </dd>
               </div>
               <div className="mt-6">
@@ -148,7 +148,7 @@ function Contact(){
                 <dt className="sr-only">Email</dt>
                 <dd className="flex">
                   <EnvelopeIcon className="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
-                  <span className="ml-3">support (mail@cosmicimagination.awsapps.com)</span>
+                  <span className="ml-3">support (jorge369b@cosmic-imagination.com)</span>
                 </dd>
               </div>
             </dl>
