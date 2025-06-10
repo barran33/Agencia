@@ -40,7 +40,7 @@ export default function Contact() {
     try {
       const res = await axios.post(
         `${process.env.REACT_APP_API_URL}/api/contacts/`,
-        formData,
+        JSON.stringify(formData), // ¡CAMBIO CLAVE AQUÍ!
         config
       );
       console.log('✅ Respuesta del servidor:', res);
@@ -55,7 +55,7 @@ export default function Contact() {
         acceptedTerms: false,
       });
     } catch (err) {
-      console.error('❌ Error al enviar mensaje:', err);
+      console.error('❌ Error al enviar mensaje:', err.response ? err.response.data : err.message); // Mejor manejo de errores
       alert('Ocurrió un error al enviar. Revisa la consola.');
     } finally {
       setLoading(false);
@@ -236,7 +236,7 @@ export default function Contact() {
                       </div>
                     ) : (
                       <button
-                        type="submit"
+                        type="submit" 
                         className="w-full rounded-md bg-cyan-400 px-4 py-3 font-medium text-white shadow-sm hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-700"
                       >
                         Send Message

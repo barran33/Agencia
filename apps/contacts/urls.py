@@ -1,7 +1,7 @@
 from django.urls import path
-from django.views.decorators.csrf import csrf_exempt
-from .views import contact_view
+# Ya no necesitas csrf_exempt importado aquí si lo aplicas en la vista
+from .views import ContactAPIView # <-- Importa la vista basada en clase
 
 urlpatterns = [
-    path('', csrf_exempt(contact_view), name='contact'),
+    path('', ContactAPIView.as_view(), name='contact'), # <-- Llama a .as_view()
 ]

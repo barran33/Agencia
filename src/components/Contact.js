@@ -81,148 +81,107 @@ function Contact(){
         <div className="w-full h-80 shadow-card rounded-lg p-12 overscroll-y-auto overflow-y-auto">
             <h1 className="font-bold text-4xl text-gray-900">Want to work with us?</h1>
             <p className="font-regular mt-4 text-2xl text-gray-700">Just tell us about your project, what are your goals, and let's start.</p>
-            <form onSubmit={e=>onSubmit(e)} className="grid grid-cols-1 gap-y-6">
-              <div>
-                <label htmlFor="full-name" className="sr-only">
-                  Full name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={name}
-                  required
-                  onChange={e=>onChange(e)}
-                  autoComplete="name"
-                  className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
-                  placeholder="Full name"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="sr-only">
-                  Email
-                </label>
-                <input
-                  value={email}
-                  onChange={e=>onChange(e)}
-                  name="email"
-                  type="email"
-                  required
-                  className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
-                  placeholder="Email"
-                />
-              </div>
-
-                <div>
-                <label htmlFor="price" className="sr-only">
-                    Phone
-                </label>
-                <div className="relative mt-1 rounded-md shadow-sm">
-                    <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                    <span className="text-gray-500 sm:text-sm">+</span>
-                    </div>
-                    <input
+             <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-6">
+                  {/* Campos del formulario: */}
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Full name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
+                    
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
+                  />
+                   <input
                     type="number"
                     name="phone"
-                    value={phone}
-                    required
-                    onChange={e=>onChange(e)}
-                    className="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-cyan-500 focus:ring-cyan-500 sm:text-sm"
                     placeholder="51 999 123 456"
+                    value={formData.phone}
+                    onChange={handleChange}
                     aria-describedby="price-currency"
-                    />
-                </div>
-                </div>
-
-              <div>
-                <label className="sr-only">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  name="subject"
-                  value={subject}
-                  required
-                  onChange={e=>onChange(e)}
-                  className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
-                  placeholder="Subject"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="sr-only">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={message}
-                  required
-                  onChange={e=>onChange(e)}
-                  rows={4}
-                  className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
-                  placeholder="Message"
-                  defaultValue={''}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="sr-only">
-                  Budget
-                </label>
-                <select
-                    name='budget'
-                    onChange={e=>onChange(e)}
-                    value={budget}
-                    className="mt-1 block w-full pl-3 pr-10 py-4 focus:border-cyan-500 focus:ring-cyan-500 border rounded-md text-base border text-gray-500 border-gray-300 "
-                >
+                    required
+                    className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
+                  />
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                    className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
+                  />
+                  <textarea
+                    id="message"
+                    type="text"
+                    name="message"
+                    rows={5}
+                    placeholder="Message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    defaultValue={''}
+                    className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
+                  />
+                  <select
+                    type="text"
+                    name="budget"
+                    placeholder="Subject"
+                    value={formData.budget}
+                    onChange={handleChange}
+                    
+                    className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
+                  >
                     <option value="" className="text-gray-400">Select a Budget (Optional)</option>
-                    <option value="0-$3k" className="text-gray-600">$0,$3000</option>
-                    <option value="$3k-$6k" className="text-gray-600">$3000 - $6000</option>
-                    <option value="$6k-$9k" className="text-gray-600">$6000 - $9000...</option>
-                </select>
-              </div>
-              <div className="px-4 py-5 sm:px-6">
-                    <div className="-ml-4 -mt-2 flex flex-wrap items-center justify-between sm:flex-nowrap">
-                        <div className="grid-cols-12 ml-4 mt-2 flex">
-                            <Switch
-                                checked={enabled}
-                                onChange={setEnabled}
-                                className={`${enabled ? 'bg-cyan-500' : 'bg-cyan-100'}
-                                col-span-3 relative inline-flex h-[32px] w-[72px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
-                            >
-                                <span
-                                aria-hidden="true"
-                                className={`${enabled ? 'translate-x-10' : 'translate-x-0'}
-                                    pointer-events-none inline-block h-[28px] w-[28px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
-                                />
-                            </Switch>
-                            <p className="col-span-9 ml-4 text-md font-regular leading-6 text-gray-600">
-                                By selecting this you accept the <span className="text-cyan-600"><Link to='/terms'>Terms of service</Link></span> and <span className="text-cyan-600"><Link to='/privacy'>Privacy policy</Link></span>.
-                            </p>
-                            
-                        </div>
-                        <div className="ml-4 mt-2 flex-shrink-0">
-                            {
-                                loading ?
-                                <div
-                                    className="relative inline-flex items-center rounded-md border border-transparent bg-cyan-400 px-4 py-3 text-lg font-medium text-white shadow-sm hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
-                                >
-                                    <CircleLoader loading={loading} size={25} color="#ffffff"/>
-                                </div>
-                                :
-                                <button
-                                    type="submit"
-                                    className="relative inline-flex items-center rounded-md border border-transparent bg-cyan-400 px-4 py-3 text-lg font-medium text-white shadow-sm hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
-                                >
-                                    Send Message
-                                </button>
+                    <option value="0-$3000" className="text-gray-600">$0,$3000</option>
+                    <option value="$3000-$6000" className="text-gray-600">$3000 - $6000</option>
+                    <option value="$6000-$9000" className="text-gray-600">$6000 - $9,000</option>
 
-                            }
-                        </div>
-                    </div>
-                </div>
-            </form>
+                  </select>
+
+                  {/* Repite inputs para email, phone, subject, message, budget... */}
+                  <label className="flex items-center space-x-3">
+                    <Switch
+                      checked={formData.acceptedTerms}
+                      onChange={checked => handleChange({ target: { name: 'acceptedTerms', type: 'checkbox', checked } })}
+                      className={`${formData.acceptedTerms ? 'bg-cyan-400' : 'bg-cyan-100'} relative inline-flex h-[32px] w-[72px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out`}
+                    >
+                      <span className="sr-only">Acepta términos</span>
+                      <span
+                        aria-hidden="true"
+                        className={`${formData.acceptedTerms ? 'translate-x-10' : 'translate-x-0'} pointer-events-none inline-block h-[28px] w-[28px] transform rounded-full bg-white shadow-lg transition duration-200 ease-in-out`}
+                      />
+                    </Switch>
+                    <span className="text-gray-900">
+                      Acepto términos y condiciones (<Link to="/terms" className="text-cyan-500 underline">ver</Link>)
+                    </span>
+                  </label>
+
+                  <div className="mt-4">
+                    {loading ? (
+                      <div className="flex justify-center">
+                        <CircleLoader loading={loading} size={25} color="#0EA5E9" />
+                      </div>
+                    ) : (
+                      <button
+                        type="submit" 
+                        className="w-full rounded-md bg-cyan-400 px-4 py-3 font-medium text-white shadow-sm hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-700"
+                      >
+                        Send Message
+                      </button>
+                    )}
+                  </div>
+                </form>
         </div>
     )
 }
