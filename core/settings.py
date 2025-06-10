@@ -248,22 +248,15 @@ if not DEBUG:
     }
     DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
-    #EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-    #DEFAULT_FROM_EMAIL = 'CosmicImagination - Software Agency <mail@cosmic-imagination.com>'
-    #EMAIL_HOST = env('EMAIL_HOST')
-    #EMAIL_HOST_POASSWORD = env('EMAIL_HOST_POASSWORD')
-    #EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-    #EMAIL_PORT = env('EMAIL_PORT')
-    #EMAIL_USE_TLS = env('EMAIL_USE_TLS')
-
+  
 
     
 
     EMAIL_BACKEND    = os.getenv('EMAIL_BACKEND')
     EMAIL_HOST       = os.getenv('EMAIL_HOST')
     EMAIL_PORT       = int(os.getenv('EMAIL_PORT', 465))
-    EMAIL_USE_SSL    = os.getenv('EMAIL_USE_SSL') == 'True'
-    EMAIL_USE_TLS    = os.getenv('EMAIL_USE_TLS') == 'False'
+    EMAIL_USE_SSL    = os.getenv('EMAIL_USE_SSL') == True
+    EMAIL_USE_TLS    = os.getenv('EMAIL_USE_TLS') == False
     EMAIL_HOST_USER  = os.getenv('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL  = os.getenv('DEFAULT_FROM_EMAIL')
