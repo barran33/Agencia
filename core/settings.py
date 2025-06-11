@@ -265,7 +265,7 @@ if not DEBUG:
     EMAIL_PORT=587
     EMAIL_USE_TLS=True
     
-    DEFAULT_FROM_EMAIL='cosmicimagination693@gmail.com'
+    DEFAULT_FROM_EMAIL='support@cosmic-imagination.com'
 
     
 
