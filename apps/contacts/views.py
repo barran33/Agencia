@@ -44,8 +44,12 @@ class ContactAPIView(APIView):
             {mensaje}
             """
             
-           
-            recipient_for_form = 'support@cosmic-imagination.com'
+            recipient_for_form = 'support@cosmic-imagination.com' # <--- ESTA ES LA DIRECCIÓN
+
+            send_mail(
+    
+                recipient_list=[recipient_for_form],# <--- El correo se envía aquí
+            ) 
 
             try:
                 # serializer.save()
