@@ -233,7 +233,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
 ]
 
-#EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 ACTIVE_CAMPAIGN_KEY=os.environ.get('ACTIVE_CAMPAIGN_KEY')
 ACTIVE_CAMPAIGN_URL=os.environ.get('ACTIVE_CAMPAIGN_URL')
 
@@ -264,7 +264,6 @@ if not DEBUG:
     EMAIL_HOST='smtp.sendgrid.net'
     EMAIL_PORT=587
     EMAIL_USE_TLS=True
-    
     DEFAULT_FROM_EMAIL='support@cosmic-imagination.com'
 
     
