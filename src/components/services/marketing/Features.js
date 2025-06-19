@@ -58,7 +58,7 @@ export default function Features() {
           <h2 className="text-lg font-semibold text-cyan-400">Everything you need</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-300">All-in-one platform</p>
           <p className="mt-4 text-lg text-cyan-400">
-            Nuestro servicio de marketing incluye:
+            Nuestro servicio de Bug Bounty incluye:
           </p>
         </div>
         <div className="mt-12 lg:col-span-2 lg:mt-0">

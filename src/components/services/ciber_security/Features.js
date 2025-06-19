@@ -17,7 +17,7 @@ const features = [
   },
   {
     name: 'Gestión de Identidades y Accesos (IAM):',
-    description: 'Establecemos políticas y tecnologías para gestionar de forma segura las identidades digitales y controlar el acceso a los recursos de tu organización, minimizando el riesgo de accesos privilegiados indebidos.',
+    description: 'Desarrollo de Herramientas Personalizadas de Hacking Ético y Ciberseguridad con Python En Cosmic Imagination, llevamos la seguridad un paso más allá. Ofrecemos el desarrollo a medida de herramientas de hacking ético y ciberseguridad utilizando Python. Esto nos permite crear soluciones innovadoras y altamente especializadas para las necesidades únicas de tu organización.',
   },
   {
     name: 'Implementación de SGSI ISO 27001:2022:',

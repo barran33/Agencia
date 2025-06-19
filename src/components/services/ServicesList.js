@@ -12,7 +12,7 @@ const SERVICE_DATA = [
   {
     id: 2,
     title: 'Bug Bounty',
-    description: 'Desarrollamos estrategias de marketing digital integrales, incluyendo SEO, SEM, redes sociales y email marketing, para potenciar tu marca, aumentar tu visibilidad y generar leads cualificados.',
+    description: 'Ofrecemos servicios especializados de Bug Bounty diseñados para identificar y mitigar vulnerabilidades en tus sistemas antes de que puedan ser explotadas.',
     href: '/servicios/bug_bounty',
     img: 'https://i.ibb.co/35BBfySK/hacker3.png'
   },
