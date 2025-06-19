@@ -48,39 +48,18 @@ function About(){
                <TestStats/>
                <ImgGrid/>
                <Client/>
-               <div className="bg-white">
+               <div className="bg-black">
                 <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-                    <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                        <img className="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" />
-                    </div>
-                    <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                        <img className="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" />
-                    </div>
-                    <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                        <img className="h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit" />
-                    </div>
-                    <div className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
-                        <img
-                        className="h-12"
-                        src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                        alt="Transistor"
-                        />
-                    </div>
-                    <div className="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
-                        <img
-                        className="h-12"
-                        src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                        alt="Workcation"
-                        />
-                    </div>
+                   
+                    
                     </div>
                 </div>
                 
                 
-                <div className="bg-gray-50">
+                <div className="bg-black">
         <div className="mx-12  max-w-full py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-300 sm:text-4xl">
             <span className="block">Ready to dive in?</span>
             <span className="block text-cyan-400">Start your free trial today.</span>
           </h2>
@@ -96,7 +75,7 @@ function About(){
             <div className="ml-3 inline-flex rounded-md shadow">
               <a
                 href="/blog/"
-                className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-cyan-500 hover:bg-cyan-100"
+                className="inline-flex items-center justify-center rounded-md border border-transparent bg-black px-5 py-3 text-base font-medium text-cyan-500 hover:bg-cyan-100"
               >
                 Learn more
               </a>

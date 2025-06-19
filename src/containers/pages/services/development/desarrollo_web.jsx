@@ -27,7 +27,7 @@ function DesarrolloWeb(){
                 <div className="px-4 py-5 sm:px-8">
                 <div className="-ml-4 -mt-2 flex flex-wrap items-center justify-between sm:flex-nowrap">
                     <div className="ml-4 mt-2">
-                    <h3 className="text-4xl font-bold leading-6 text-gray-900">Co§mic Contact</h3>
+                    <h3 className="text-4xl font-bold leading-6 text-cyan-400">Co§mic Contact</h3>
                     </div>
                 </div>
                 </div>
@@ -39,23 +39,23 @@ function DesarrolloWeb(){
                     </div>
                     <div className="col-span-6">
 
-                    <section className="bg-gray-50 mx-4 rounded-lg">
+                    <section className="bg-black mx-4 rounded-lg">
                         <div className="mx-auto max-w-7xl px-8">
                             <div className="py-12 px-4 sm:px-6 md:flex md:flex-col md:py-8">
                                 <div className="md:flex-shrink-0">
-                                <img className="h-12" src="https://bafybeifbthqhc63mivqixm6qvnuttfomcc7qcmmd2u7vv5sgj5glj5cdzq.ipfs.w3s.link/magic3.png" />
+                                <img className="h-12" src="https://i.ibb.co/G3dT2Lq3/cos33.jpg" />
                                 </div>
                                 <blockquote className="mt-6 md:flex md:flex-grow md:flex-col">
-                                <div className="relative text-lg font-medium text-black md:flex-grow">
+                                <div className="relative text-lg font-medium text-cyan-400 md:flex-grow">
                                     <svg
-                                    className="absolute top-0 left-0 h-4 w-4 -translate-x-3 -translate-y-2 transform text-gray-600"
+                                    className="absolute top-0 left-0 h-4 w-4 -translate-x-3 -translate-y-2 transform text-gray-300"
                                     fill="currentColor"
                                     viewBox="0 0 32 32"
                                     aria-hidden="true"
                                     >
                                     <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                                     </svg>
-                                    <div className="relative mx-auto ">
+                                    <div className="relative mx-auto bg-black text-cyan-400">
                                     ¡Contáctanos hoy mismo y descubre cómo nuestro servicio de desarrollo web puede llevar tu presencia en línea al siguiente nivel y proporcionar una experiencia excepcional a tus visitantes!!!
                                     </div>
                                 </div>
@@ -69,8 +69,8 @@ function DesarrolloWeb(){
                                         />
                                     </div>
                                     <div className="ml-4">
-                                        <div className="text-base font-medium text-black">Jorge Barrantes</div>
-                                        <div className="text-base font-medium text-gray-500">Founder & CEO, Co§mic Imagination</div>
+                                        <div className="text-base font-medium text-gray-300">Jorge Barrantes</div>
+                                        <div className="text-base font-medium text-cyan-400">Founder & CEO, Co§mic Imagination</div>
                                     </div>
                                     </div>
                                 </footer>

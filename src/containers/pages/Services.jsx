@@ -102,7 +102,7 @@ function Services(){
               <div className="mx-auto max-w-1700">
                 {/* Content goes here */}
                 <Header/> 
-                <div className="py-12 bg-gray-50">
+                <div className="py-12 bg-black">
 
                 </div>
                 <ServicesList posts={posts_software} section_title={'Software and Product Development'}/> 

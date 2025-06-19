@@ -1,5 +1,6 @@
 import { Typewriter } from 'react-simple-typewriter'
 import { Link } from 'react-router-dom'
+
 const navigation = {
   solutions: [
     { name: 'Marketing', href: '#' },
@@ -16,7 +17,6 @@ const navigation = {
     { name: 'Nosotros', href: '/nosotros' },
     { name: 'Especialistas', href: '/especialistas' },
     { name: 'Blog', href: '/blog' },
-    
   ],
   legal: [
     { name: 'Claim', href: '#' },
@@ -88,25 +88,37 @@ const navigation = {
   ],
 }
 
- 
- function Header(){
+// Importa useState si necesitas manejar el estado para el Typewriter (no es estrictamente necesario para el efecto básico)
+// import React, { useState } from 'react'; // Si ya importas React, no necesitas esto de nuevo
+
+
+function Header(){
     return(
-        <main>
+        <main className=""> {/* Asegura que el main también tenga fondo negro */}
         <div className="relative">
         <div className="mx-auto max-w-full xl:mx-12 xl:pt-40 xl:pb-64 lg:pt-40 lg:pb-48 pt-24 pb-12">
             <div>
               <div>
-                <h1 className="text-6xl font-semibold tracking-tight pb-15 sm:text-6xl">
+                <h1 className="text-6xl font-semibold text-cyan-400 tracking-tight pb-15 sm:text-6xl">
                 Co§mic Imagination  Services
                 </h1>
-                <p className="mt-12 text-2xl leading-8 text-gray-900">
-                 
+                <p className="mt-12 text-2xl leading-8 text-gray-300">
+                  {/* Aquí va el efecto de Typewriter */}
+                  <Typewriter
+                    words={['Innovación', 'Tecnología', 'Seguridad', 'Futuro Digital']} // Las palabras que quieres que se "escriban"
+                    loop={true} // Repetir el efecto infinitamente
+                    cursor // Mostrar el cursor al final de la palabra
+                    cursorStyle='_' // Estilo del cursor
+                    typeSpeed={70} // Velocidad de escritura
+                    deleteSpeed={50} // Velocidad de borrado
+                    delaySpeed={1000} // Pausa antes de borrar/escribir la siguiente palabra
+                  />
                 </p>
               </div>
-              <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+              <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu bg-black overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
               </div>
-              <div className="absolute inset-x-0 top-[calc(100%-20rem)] -z-10 transform-gpu overflow-hidden bg-white blur-lg lg:top-[calc(100%-45rem)] sm:top-[calc(100%-40rem)]">
-              <img src="https://thumbs.dreamstime.com/z/s%C3%ADmbolo-de-la-alquimia-y-de-la-geometr%C3%ADa-sagrada-en-el-fondo-azul-de-la-acuarela-76843935.jpg" className='w-full h-full object-cover'/>
+              <div className="absolute inset-x-0 top-[calc(100%-20rem)] -z-10 transform-gpu overflow-hidden bg-black blur-lg lg:top-[calc(100%-45rem)] sm:top-[calc(100%-40rem)]">
+              <img src="https://i.ibb.co/rfTsMsvT/cosmic39.jpg" className='w-full h-full object-cover'/>
             </div>
             </div>
           </div>

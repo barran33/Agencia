@@ -32,7 +32,9 @@ border-radius: 10px;
 
 body {
   height: 100vh;
+  background-color: black; /* Añade esta línea */
 }
+
 
 .rec.rec-arrow {
   background-color: rgb(53, 57, 57);
@@ -60,6 +62,32 @@ body {
   background-color: #eaeaea;
 }
 
+
+ .rec-arrow {
+                    background-color:  cyan  !important; /* Fondo negro */
+                    color: rgb(196, 197, 198)!important; /* Icono/flecha cian */
+                    border-radius: 50% !important; /* Hace los botones redondos */
+                    transition: all 0.3s ease; /* Transición suave para hover */
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+                }
+
+                .rec-arrow:hover:not(:disabled) {
+                    background-color:  rgb(234, 240, 242) !important; /* Cian más oscuro al hacer hover */
+                    color:  #00fff7! important; /* Icono blanco al hacer hover */
+                    transform: scale(1.1); /* Efecto de "agrandar" al hacer hover */
+                }
+
+                .rec-arrow:disabled {
+                    opacity: 0.5; /* Reduce la opacidad de las flechas deshabilitadas */
+                    cursor: not-allowed;
+                }
+
+                /* Puedes ajustar el tamaño de las flechas si lo necesitas */
+                .rec-arrow {
+                    width: 600px; /* Ancho del botón */
+                    height: 600px; /* Altura del botón */
+                    font-size: 1.5rem; /* Tamaño de la flecha */
+                }
 
 
   

@@ -5,8 +5,8 @@ const posts = [
       category: { name: 'Article', href: '#', color: 'bg-cyan-400 text-cyan-600' },
       description:
         'Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.',
-      date: 'Mar 16, 2020',
-      datetime: '2020-03-16',
+      date: '',
+      datetime: '',
       author: {
         name: 'Paul York',
         href: '#',
@@ -21,7 +21,7 @@ const posts = [
       category: { name: 'Video', href: '#', color: 'bg-pink-100 text-pink-800' },
       description:
         'Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.',
-      date: 'Mar 10, 2020',
+      date: '',
       datetime: '2020-03-10',
       author: {
         name: 'Dessie Ryan',
@@ -55,11 +55,11 @@ const posts = [
   export default function BlogList() {
     
     return (
-      <div className="bg-white px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
+      <div className=" bg-black px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
         <div className="relative mx-auto lg:mx-12 max-w-lg divide-y-2 divide-gray-200 lg:max-w-full">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Recent publications</h2>
-            <p className="mt-3 text-xl text-gray-500 sm:mt-4">
+            <h2 className="text-3xl font-bold tracking-tight text-cyan-400 sm:text-4xl">Recent publications</h2>
+            <p className="mt-3 text-xl text-cyan-400 sm:mt-4">
               Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus
               arcu.
             </p>

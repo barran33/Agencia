@@ -96,17 +96,17 @@ const navigation = {
         <div className="mx-auto max-w-full xl:mx-12 xl:pt-40 xl:pb-64 lg:pt-40 lg:pb-48 pt-24 pb-12">
             <div>
               <div>
-                <h1 className="text-6xl font-semibold tracking-tight pb-18 sm:text-6xl">
+                <h1 className="text-6xl font-semibold tracking-tight text-cyan-400 pb-18 sm:text-6xl">
                    Ciberseguridad
                 </h1>
-                <p className="mt-12 text-2xl leading-8 text-gray-900">
-                En Co§mic Imagination, entendemos que la seguridad en línea es de suma importancia para el éxito de tu empresa
+                 <p className="mt-12 text-2xl leading-8 text-gray-300">
+                   En Co§mic Imagination, comprendemos que la **Seguridad informatica** es el pilar (fundamental) para la continuidad y reputación de tu negocio en la era digital. Ofrecemos **soluciones integrales y proactivas** para proteger tus activos más valiosos, sistemas y datos, asegurando una defensa robusta contra las amenazas cibernéticas en constante evolución.
                 </p>
               </div>
               <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
               </div>
               <div className="absolute inset-x-0 top-[calc(100%-20rem)] -z-10 transform-gpu overflow-hidden bg-white blur-lg lg:top-[calc(100%-45rem)] sm:top-[calc(100%-40rem)]">
-              <img src="https://thumbs.dreamstime.com/z/s%C3%ADmbolo-de-la-alquimia-y-de-la-geometr%C3%ADa-sagrada-en-el-fondo-azul-de-la-acuarela-76843935.jpg" className='w-full h-full object-cover'/>
+              <img src="https://i.ibb.co/rfTsMsvT/cosmic39.jpg" className='w-full h-full object-cover'/>
             </div>
             </div>
           </div>

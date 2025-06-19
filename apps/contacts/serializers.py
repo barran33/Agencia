@@ -8,3 +8,11 @@ class ContactSerializer(serializers.ModelSerializer):
         model = Contact
         fields = ['id', 'name', 'email', 'phone', 'subject', 'message', 'budget', 'date_created']
         read_only_fields = ['id', 'date_created']
+
+
+
+class OptInSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    tag = serializers.IntegerField() # O CharField, dependiendo de cómo lo uses
+    list = serializers.IntegerField() # O CharField
+

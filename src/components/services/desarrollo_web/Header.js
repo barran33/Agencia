@@ -96,17 +96,17 @@ const navigation = {
         <div className="mx-auto max-w-full xl:mx-12 xl:pt-40 xl:pb-64 lg:pt-40 lg:pb-48 pt-24 pb-12">
             <div>
               <div>          
-                <h1 className="text-6xl font-semibold tracking-tight pb-18 sm:text-6xl">
+                <h1 className="text-6xl font-semibold text-cyan-400 tracking-tight pb-18 sm:text-6xl">
                    Desarrollo Web
                 </h1>
-                <p className="mt-12 text-2xl leading-8 text-gray-900">
-                En Co§mic Imagination, entendemos que una presencia en línea sólida y atractiva es esencial para el éxito de tu negocio. Nuestro equipo de desarrolladores web altamente capacitados está listo para ayudarte a crear aplicaciones web innovadoras y personalizadas que impulsen tu presencia en línea y brinden experiencias excepcionales 
-                </p>
+                <p className="mt-12 text-2xl leading-8 text-gray-300">
+                  En Co§mic Imagination, convertimos tus ideas en **soluciones digitales innovadoras y de alto rendimiento**. Nuestro equipo de desarrolladores de software y desarrolladores web expertos está dedicado a crear **aplicaciones robustas, escalables y centradas en el usuario** que no solo fortalezcan tu presencia en línea, sino que también optimicen tus operaciones y te posicionen a la vanguardia tecnológica.
+               </p>
               </div>
               <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
               </div>
-              <div className="absolute inset-x-0 top-[calc(100%-20rem)] -z-10 transform-gpu overflow-hidden bg-white blur-lg lg:top-[calc(100%-45rem)] sm:top-[calc(100%-40rem)]">
-              <img src="https://thumbs.dreamstime.com/z/s%C3%ADmbolo-de-la-alquimia-y-de-la-geometr%C3%ADa-sagrada-en-el-fondo-azul-de-la-acuarela-76843935.jpg" className='w-full h-full object-cover'/>
+              <div className="absolute inset-x-0 top-[calc(100%-20rem)] -z-10 transform-gpu overflow-hidden bg-black blur-lg lg:top-[calc(100%-45rem)] sm:top-[calc(100%-40rem)]">
+              <img src="https://i.ibb.co/rfTsMsvT/cosmic39.jpg" className='w-full h-full object-cover'/>
             </div>
             </div>
           </div>

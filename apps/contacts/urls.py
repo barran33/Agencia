@@ -1,7 +1,10 @@
 from django.urls import path
 # Ya no necesitas csrf_exempt importado aquí si lo aplicas en la vista
 from .views import ContactAPIView # <-- Importa la vista basada en clase
-
+from .views import OptInAPIView
 urlpatterns = [
-    path('', ContactAPIView.as_view(), name='contact'), # <-- Llama a .as_view()
+    path('', ContactAPIView.as_view(), name='contact'), 
+    # <-- Llama a .as_view()
+    path('opt-in' , OptInAPIView.as_view(), name='opt-in'),
 ]
+

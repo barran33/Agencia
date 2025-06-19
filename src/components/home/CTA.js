@@ -1,7 +1,50 @@
+
 import CircleLoader from "react-spinners/CircleLoader";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion"; // Importa motion
+
+// Función auxiliar para obtener la cookie CSRF
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+// Define las variantes de animación fuera del componente CTA
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2, // Retraso entre cada elemento hijo animado
+            delayChildren: 0.1 // Retraso inicial antes de que los hijos empiecen
+        }
+    }
+};
+
+const itemVariants = {
+    hidden: { y: 50, opacity: 0 }, // Empieza 50px abajo y transparente
+    visible: {
+        y: 0, // Se desliza a su posición original
+        opacity: 1, // Se vuelve opaco
+        transition: {
+            type: "spring", // Animación tipo muelle
+            stiffness: 120, // Rigidez del muelle
+            damping: 14 // Amortiguación del muelle
+        }
+    }
+};
 
 export default function CTA() {
   const [formData, setFormData]=useState({
@@ -20,47 +63,70 @@ const [loading, setLoading]=useState(false)
 
 const navigate = useNavigate()
 
-const onSubmit=(e)=>{
+const onSubmit=(e)=>{ // Hacemos esta función async para usar await
     e.preventDefault()
+
+    const csrftoken = getCookie('csrftoken');
+    axios.defaults.headers.common['X-CSRFToken'] = csrftoken;
 
     const config = {
         headers: {
-            'Content-Type': 'application/json'
+            'X-CSRFToken': csrftoken,
         }
     }
 
-    const formData = new FormData()
-    formData.append('email', email)
-    formData.append('tag', 1)
-    formData.append('list', 2)
+    const requestFormData = new FormData()
+    requestFormData.append('email', email)
+    requestFormData.append('tag', 1)
+    requestFormData.append('list', 2)
 
     const fetchData = async () => {
         setLoading(true);
-        const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contacts/opt-in`,
-        formData,
-        config)
+        try {
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contacts/opt-in`,
+            requestFormData,
+            config)
 
-        if(res.status === 200){
-            setTimeout(()=>{
-                navigate('/ebook/training')
-            },1000)
-            
-        }else{
-            alert('Error sending message')
+            if(res.status === 200 || res.status === 201){
+                setTimeout(()=>{
+                    navigate('/ebook')
+                },1000)
+            } else {
+                alert(`Error al enviar mensaje: Código ${res.status}`);
+            }
+        } catch (error) {
+            console.error("Error al enviar el mensaje:", error);
+            if (error.response) {
+                alert(`Error: ${error.response.status} - ${error.response.data.detail || error.response.data.message || 'Error del servidor'}`);
+            } else if (error.request) {
+                alert('Error: No se pudo conectar con el servidor.');
+            } else {
+                alert('Error inesperado.');
+            }
+        } finally {
+            setLoading(false);
         }
     }
     fetchData()
-
-    
 }
     return (
-      <div className="bg-gray-50">
-        <div className="mx-auto  max-w-full py-12 lg:flex lg:items-center lg:justify-between lg:py-16">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <div className="bg-black">
+        {/* Este es el contenedor principal de tu CTA, aplica aquí la animación de entrada */}
+        <motion.div
+            className="mx-auto max-w-full py-12 lg:flex lg:items-center lg:justify-between lg:py-16"
+            initial="hidden"
+            whileInView="visible" // Anima cuando el componente entra en la vista
+            viewport={{ once: false, amount: 0.3 }} // Se anima cada vez que entra en vista
+            variants={containerVariants} // Aplica las variantes del contenedor
+        >
+          {/* Título y subtítulos (como un bloque animado) */}
+          <motion.h2 className="text-3xl font-bold tracking-tight text-cyan-400 sm:text-4xl" variants={itemVariants}>
             <span className="block">Ready to dive in?</span>
             <span className="block text-cyan-400">Start your free trial today.</span>
-          </h2>
-          <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+          </motion.h2>
+
+          {/* Contenedor del formulario (como un bloque animado) */}
+          <motion.div className="mt-8 flex lg:mt-0 lg:flex-shrink-0" variants={itemVariants}>
             <div className="inline-flex rounded-md shadow">
             <form onSubmit={e=>onSubmit(e)} className="mt-12 sm:flex sm:w-full sm:max-w-lg">
                 <div className="min-w-0 flex-1">
@@ -97,10 +163,8 @@ const onSubmit=(e)=>{
                         </div>
               </form>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     )
   }
-
-  

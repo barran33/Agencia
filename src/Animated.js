@@ -36,7 +36,7 @@ function Animated(){
             <Route path="/cosmovisión/científica" element={<Cientifica/>}/> 
             <Route path="/cosmovisión/espiritual" element={<Espiritual/>}/> 
             <Route path="/servicios/" element={<Services/>}/> 
-            <Route path="/servicios/marketing" element={<Marketing/>}/>
+            <Route path="/servicios/bug_bounty" element={<Marketing/>}/>
             <Route path="/servicios/security" element={<Security/>}/>  
             <Route path="/servicios/desarrollo_web" element={<DesarrolloWeb/>}/> 
             <Route path="/nosotros" element={<About/>}/> 
@@ -47,7 +47,7 @@ function Animated(){
             <Route path="/category/:slug" element={<Category />} /> 
             <Route path="/contacto" element={<Contact/>}/>   
             <Route path="/ebook" element={<Optin/>}/> 
-            <Route path="/ebook/training" element={<OptinCTA />} />
+           
             
             
             </Routes>

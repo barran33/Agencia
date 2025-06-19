@@ -1,5 +1,5 @@
 // src/components/Contact.jsx
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react'; // Importa useRef
 import Navbar from "components/navigation/Navbar";
 import Layout from "hocs/layouts/Layout";
 import Footer from "components/navigation/Footer";
@@ -9,6 +9,7 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
 import { Link } from "react-router-dom";
 import axios from "axios";
 import CircleLoader from "react-spinners/CircleLoader";
+import { motion, useInView } from 'framer-motion'; // Importa motion y useInView
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -40,7 +41,7 @@ export default function Contact() {
     try {
       const res = await axios.post(
         `${process.env.REACT_APP_API_URL}/api/contacts/`,
-        JSON.stringify(formData), // ¡CAMBIO CLAVE AQUÍ!
+        JSON.stringify(formData),
         config
       );
       console.log('✅ Respuesta del servidor:', res);
@@ -55,7 +56,7 @@ export default function Contact() {
         acceptedTerms: false,
       });
     } catch (err) {
-      console.error('❌ Error al enviar mensaje:', err.response ? err.response.data : err.message); // Mejor manejo de errores
+      console.error('❌ Error al enviar mensaje:', err.response ? err.response.data : err.message);
       alert('Ocurrió un error al enviar. Revisa la consola.');
     } finally {
       setLoading(false);
@@ -69,6 +70,32 @@ export default function Contact() {
     }
     fetchData();
   };
+
+  
+  const contactInfoRef = useRef(null);
+  const isContactInfoInView = useInView(contactInfoRef, {  amount: 0.3 }); // Animar cuando el 30% del contenido de la columna izquierda esté visible
+
+  // Variantes para los elementos de texto (título, párrafos, elementos de lista)
+  const textVariants = {
+    hidden: { opacity: 0, y: 30 }, // Empieza invisible y 30px abajo
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }, // Animación de 0.6 segundos, suavizando al final
+    },
+  };
+
+  // Variantes para el contenedor principal de la información de contacto para aplicar `staggerChildren`
+  const textContainerVariants = {
+    hidden: { opacity: 0 }, // El contenedor es invisible inicialmente
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15, // Retraso de 0.15 segundos entre la animación de cada elemento hijo
+      },
+    },
+  };
+  // --- Fin Framer Motion Hooks y Variantes ---
 
   return (
     <Layout>
@@ -90,59 +117,68 @@ export default function Contact() {
                 <meta
                     name="twitter:description"
                     content='Agencia de Software , Ciencia y Espiritualidad. Creamos paginas web y desarrollamos aplicaciones unicas con esencia y autenticidad'/>
-                
+
                 <meta name="twitter:image" content='https://thumbs.dreamstime.com/z/s%C3%ADmbolo-de-la-alquimia-y-de-la-geometr%C3%ADa-sagrada-en-el-fondo-azul-de-la-acuarela-76843935.jpg' />
                 <meta name="twitter:card" content="summary_large_image" />
-            
+
             </Helmet>
       <Navbar />
       <div className="pt-28">
-            <div className="relative bg-white">
+            <div className="relative bg-black">
       <div className="absolute inset-0">
-        <div className="absolute inset-y-0 left-0 w-1/2 bg-white" />
+        <div className="absolute inset-y-0 left-0 w-1/2 bg-black" />
       </div>
       <div className="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
-        <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
-          <div className="mx-auto max-w-lg">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Contactanos</h2>
-            <p className="mt-3 text-lg leading-6 text-gray-500">
+        {/* Columna Izquierda: Información de Contacto (APLICAREMOS SCROLL AQUÍ) */}
+        <div className="bg-black py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
+          <motion.div // Este es el div principal que observará el scroll
+            ref={contactInfoRef}
+            variants={textContainerVariants}
+            initial="hidden"
+            animate={isContactInfoInView ? "visible" : "hidden"}
+            className="mx-auto max-w-lg"
+          >
+            <motion.h2 variants={textVariants} className="text-2xl font-bold tracking-tight text-cyan-400 sm:text-3xl">Contactanos</motion.h2>
+            <motion.p variants={textVariants} className="mt-3 text-lg leading-6 text-gray-300">
             ¡Bienvenido al Área de Contacto de Co§mic Imagination! Si estás buscando un socio de confianza para llevar tus ideas al universo digital, has llegado al lugar correcto. Estamos aquí para escuchar tus necesidades y transformarlas en soluciones de software cósmicas. ¡Déjanos ser tu guía en esta aventura tecnológica!
-            </p>
-            <dl className="mt-8 text-base text-gray-500">
-              <div>
+            </motion.p>
+            <motion.dl variants={textContainerVariants} className="mt-8 text-base text-gray-300">
+              <motion.div variants={textVariants}> {/* Wrap the p tags for individual animation */}
                 <dt className="sr-only">Postal address</dt>
                 <dd>
                   <p>20301 Grecia</p>
                   <p>Alajuela, Costa Rica</p>
                 </dd>
-              </div>
-              <div className="mt-6">
+              </motion.div>
+              <motion.div variants={textVariants} className="mt-6">
                 <dt className="sr-only">Phone number</dt>
                 <dd className="flex">
-                  <PhoneIcon className="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                  <PhoneIcon className="h-6 w-6 flex-shrink-0 text-cyan-400" aria-hidden="true" />
                   <span className="ml-3">+1 (333) 696-393</span>
                 </dd>
-              </div>
-              <div className="mt-3">
+              </motion.div>
+              <motion.div variants={textVariants} className="mt-3">
                 <dt className="sr-only">Email</dt>
                 <dd className="flex">
-                  <EnvelopeIcon className="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                  <EnvelopeIcon className="h-6 w-6 flex-shrink-0 text-cyan-400" aria-hidden="true" />
                   <span className="ml-3">support@cosmic-imagination.com</span>
                 </dd>
-              </div>
-            </dl>
-            <p className="mt-6 text-base text-gray-500">
+              </motion.div>
+            </motion.dl>
+            <motion.p variants={textVariants} className="mt-6 text-base text-gray-300">
               Looking for careers?{' '}
-              <a href="#" className="font-medium text-gray-700 underline">
+              <a href="#" className="font-medium text-cyan-400 underline">
                 View all job openings
               </a>
               .
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
-        <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
-          <div className="mx-auto max-w-lg lg:max-w-none">
-     
+
+        {/* Columna Derecha: Formulario (NO TOCAMOS ESTA SECCIÓN) */}
+        <div className="bg-black py-black16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
+          <div className="mx-auto max-w-lg  lg:max-w-none">
+
                 <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-6">
                   {/* Campos del formulario: */}
                   <input
@@ -153,7 +189,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
-                    
+
                   />
                   <input
                     type="email"
@@ -201,7 +237,7 @@ export default function Contact() {
                     placeholder="Subject"
                     value={formData.budget}
                     onChange={handleChange}
-                    
+
                     className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-cyan-500 focus:ring-cyan-500"
                   >
                     <option value="" className="text-gray-400">Select a Budget (Optional)</option>
@@ -224,8 +260,9 @@ export default function Contact() {
                         className={`${formData.acceptedTerms ? 'translate-x-10' : 'translate-x-0'} pointer-events-none inline-block h-[28px] w-[28px] transform rounded-full bg-white shadow-lg transition duration-200 ease-in-out`}
                       />
                     </Switch>
-                    <span className="text-gray-900">
-                      Acepto términos y condiciones (<Link to="/terms" className="text-cyan-500 underline">ver</Link>)
+                    {/* CAMBIO DE COLOR AQUÍ */}
+                    <span className="text-cyan-500">
+                      Acepto términos y condiciones (<button to="/terms" className="text-gray-300 underline">ver</button>)
                     </span>
                   </label>
 
@@ -236,7 +273,7 @@ export default function Contact() {
                       </div>
                     ) : (
                       <button
-                        type="submit" 
+                        type="submit"
                         className="w-full rounded-md bg-cyan-400 px-4 py-3 font-medium text-white shadow-sm hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-700"
                       >
                         Send Message

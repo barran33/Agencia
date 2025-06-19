@@ -10,6 +10,8 @@ from rest_framework.authentication import BasicAuthentication
 
 from .auth import CsrfExemptSessionAuthentication
 from .serializers import ContactSerializer 
+from .serializers import OptInSerializer
+from .auth import CsrfExemptSessionAuthentication
 
 from django.views.decorators.csrf import csrf_exempt 
 from django.utils.decorators import method_decorator 
@@ -65,3 +67,35 @@ class ContactAPIView(APIView):
         else:
             print("Errores del serializador:", serializer.errors)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+# --- NUEVA VISTA PARA OPT-IN ---
+@method_decorator(csrf_exempt, name='dispatch') # Para asegurar que no haya problemas de CSRF en desarrollo
+class OptInAPIView(APIView):
+    authentication_classes = [CsrfExemptSessionAuthentication] # Puedes simplificar si no necesitas BasicAuth
+    permission_classes = [AllowAny] # Esto permite que cualquier usuario no autenticado acceda a la vista
+
+    def post(self, request, *args, **kwargs):
+        # Asumiendo que esperas 'email', 'tag' y 'list'
+        # Puedes crear un OptInSerializer simple o procesar los datos directamente
+        # Si no tienes un serializador para esto, aquí hay un ejemplo básico
+        email = request.data.get('email')
+        tag = request.data.get('tag')
+        list_id = request.data.get('list')
+
+        if not email:
+            return Response({'error': 'Email es requerido.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        print(f"Datos recibidos para Opt-In: Email={email}, Tag={tag}, List={list_id}")
+
+        # Aquí integrarías la lógica para ActiveCampaign u otro servicio de email marketing
+        # Por ahora, solo un mensaje de éxito simulado
+        try:
+            # Ejemplo: Llamada a ActiveCampaign API aquí
+            # active_campaign_service.add_contact(email, tag, list_id)
+            print(f"Procesando opt-in para {email} con tag {tag} en lista {list_id}")
+            return Response({'success': 'Suscripción exitosa!'}, status=status.HTTP_200_OK)
+        except Exception as e:
+            print(f"Error al procesar opt-in: {e}")
+            return Response({'error': 'Error al procesar la suscripción.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

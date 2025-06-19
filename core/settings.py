@@ -74,15 +74,16 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',        # 1. CORS debe ir primero para manejar las cabeceras
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',    # 2. CSRF DEBE IR DESPUÉS de Session y Common
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # ¡Elimina la segunda ocurrencia de 'django.middleware.csrf.CsrfViewMiddleware' aquí!
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -228,10 +229,18 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3001',
     'http://localhost:3000',
 ]
+CORS_ALLOW_CREDENTIALS = True
+
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3001',
     'http://localhost:3000',
 ]
+
+
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None' # Si usas sesiones también
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False 
 
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 ACTIVE_CAMPAIGN_KEY=os.environ.get('ACTIVE_CAMPAIGN_KEY')
@@ -249,7 +258,7 @@ if not DEBUG:
     DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
   
-
+    
     
 
     #EMAIL_BACKEND    = os.getenv('EMAIL_BACKEND')
