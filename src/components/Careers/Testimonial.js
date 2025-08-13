@@ -80,7 +80,7 @@ function Testimonial() {
                                 <div className="aspect-w-4 aspect-h-5 sm:aspect-w-4 sm:aspect-h-5 lg:aspect-w-4 lg:aspect-h-5 h-full bg-black">
                                     <img
                                         className="object-contain h-full w-full"
-                                        src="https://bafybeidqakv2q7wss7xb5lebjwksjlbwouk3vtvirad4b3yywsljzep4bm.ipfs.w3s.link/george.jpeg"
+                                        src="https://i.ibb.co/ynF6Lgtb/joyboy3.jpg"
                                         alt="Jorge Barrantes"
                                     />
                                 </div>
