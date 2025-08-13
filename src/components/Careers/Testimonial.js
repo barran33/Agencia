@@ -116,7 +116,7 @@ function Testimonial() {
                                     variants={textItemVariants}
                                     className="mt-6 text-2xl font-medium text-gray-50"
                                 >
-                                    Me gusta pensar que el proposito de la humanidad es. Crear un mundo mejor para las futuras generaciones
+                                    Me gusta pensar que el proposito de la humanidad es: Crear un mundo mejor para las futuras generaciones
                                 </motion.p>
 
                                 <motion.footer
@@ -124,7 +124,7 @@ function Testimonial() {
                                     className="mt-6"
                                 >
                                     <motion.p variants={textItemVariants} className="text-base font-medium text-gray-50">Jorge Barrantes</motion.p>
-                                    <motion.p variants={textItemVariants} className="text-base font-medium text-white">Founder & CEO, Co§mic Imagination </motion.p>
+                                    <motion.p variants={textItemVariants} className="text-base font-medium text-white">Founder & CEO: Co§mic Imagination </motion.p>
                                 </motion.footer>
                             </motion.blockquote>
                         </motion.div>
