@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'; // <-- Importa motion
 const singleCosmicImage = {
     title: '', // Puedes cambiar este título
     size: 'Explora lo Infinito', // Puedes cambiar este texto (o dejarlo vacío si no es relevante)
-    source: 'https://bafybeia65pb6ezdgiefw7obt2plu6jothfdmk5jrdsc7w7v5o6gyohuima.ipfs.w3s.link/cimatica.jpeg' // ¡Asegúrate de que esta sea la URL de la imagen que deseas mostrar!
+    source: 'https://i.ibb.co/q4vMLZf/cimatica.jpg' // ¡Asegúrate de que esta sea la URL de la imagen que deseas mostrar!
 };
 
 // --- Variantes de Animación para la Tarjeta de Imagen ---

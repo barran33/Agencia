@@ -113,14 +113,14 @@ const posts = [
       name: '',
       href: '#',
       imageUrl:
-        'https://bafybeiaivrifvvqho6bmskcruncblfcwdnfl3h3dudaz6uuuw3re4xhpbe.ipfs.w3s.link/magic6.png',
+        'https://i.ibb.co/nsP2Fhvn/magic6.png',
     },
   },
   {
       id:'5678-asdf',
     title: 'Espiritualidad',
     href: '/cosmovisión/espiritual',
-    category: { name: ' Magia', href: '/cosmovisión/espiritual' },
+    category: { name: ' magia', href: '/cosmovisión/espiritual' },
     description:
       'La espiritualidad nos recuerda que somos parte de un cosmos interconectado, mientras que la ciencia nos muestra cómo esas conexiones se manifiestan a nivel cósmico',
     date: 'Jun 9, 2023',
@@ -132,7 +132,7 @@ const posts = [
     author: {
       href: '#',
       imageUrl:
-        'https://bafybeiaivrifvvqho6bmskcruncblfcwdnfl3h3dudaz6uuuw3re4xhpbe.ipfs.w3s.link/magic6.png',
+        'https://i.ibb.co/nsP2Fhvn/magic6.png',
     },
   },
   {
@@ -147,10 +147,12 @@ const posts = [
     imageUrl:
       'https://i.ibb.co/fdcBBmjG/cosmic369.jpg',
     readingTime: '6 min',
-    author: {
+    author: { 
       href: '#',
       imageUrl:
-        'https://bafybeiaivrifvvqho6bmskcruncblfcwdnfl3h3dudaz6uuuw3re4xhpbe.ipfs.w3s.link/magic6.png',
+        'https://i.ibb.co/nsP2Fhvn/magic6.png',
+        author:'cosmic'
+      
     },
   },
 ]

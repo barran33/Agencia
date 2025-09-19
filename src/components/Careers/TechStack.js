@@ -50,7 +50,7 @@ function TechStack(){
                 className="mt-4 ml-8 flex flex-shrink-0 flex-grow lg:ml-4 lg:flex-grow-0"
                 variants={itemVariants}
             >
-              <img className="h-14" src="https://bafybeigvj3z2lemqhvstdmbdgm25h7u2at6hdoh6lfbs5varmjf6su5yn4.ipfs.w3s.link/programacion.png" alt="Programming" />
+              <img className="h-14" src="https://i.ibb.co/rG65NS1x/hacker33.png" alt="Programming" />
             </motion.div>
 
             <motion.div
@@ -66,7 +66,7 @@ function TechStack(){
             >
               <img
                 className="h-14"
-                src="https://bafkreigon65p3nuldaqpblydizhzljc5jhesgubdmughcuypwfpaya7xhy.ipfs.dweb.link/?filename=react.png"
+                src="https://i.ibb.co/cSkFFGVj/r3act.png"
                 alt="React"
               />
             </motion.div>
@@ -88,7 +88,7 @@ function TechStack(){
             >
               <img
                 className="h-14"
-                src="https://bafkreigs6zndzs5spg5yjziys6ypurln4pz3fw3ephv775iyesuoyolgei.ipfs.dweb.link/?filename=js.png"
+                src="https://i.ibb.co/6cFKLxJW/js-format.png"
                 alt="Javascript"
               />
             </motion.div>

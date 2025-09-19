@@ -64,7 +64,7 @@ function DesarrolloWeb(){
                                     <div className="inline-flex flex-shrink-0 rounded-full border-2 border-white">
                                         <img
                                         className="h-12 w-12 rounded-full"
-                                        src="https://bafybeiaivrifvvqho6bmskcruncblfcwdnfl3h3dudaz6uuuw3re4xhpbe.ipfs.w3s.link/magic6.png"
+                                        src="https://i.ibb.co/nsP2Fhvn/magic6.png"
                                         alt=""
                                         />
                                     </div>
