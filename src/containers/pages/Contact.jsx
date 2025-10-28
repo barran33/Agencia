@@ -154,7 +154,7 @@ export default function Contact() {
                 <dt className="sr-only">Phone number</dt>
                 <dd className="flex">
                   <PhoneIcon className="h-6 w-6 flex-shrink-0 text-cyan-400" aria-hidden="true" />
-                  <span className="ml-3">+1 (333) 696-393</span>
+                  <span className="ml-3">+506 88474150</span>
                 </dd>
               </motion.div>
               <motion.div variants={textVariants} className="mt-3">
