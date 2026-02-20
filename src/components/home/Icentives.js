@@ -1,53 +1,57 @@
 import { motion } from "framer-motion"
 
-
 const incentives = [
     {
-      name: 'Ciencia',
-      imageSrc: 'https://i.ibb.co/v6dHp0K9/at33.png',
-      description: "La ciencia sin espiritualidad es coja, la espiritualidad sin ciencia es ciega.",
+      name: 'Exponential Growth',
+      imageSrc: 'https://i.ibb.co/SXmVJ0wb/monitor369.png',
+      description: "Architecture that scales with your ambition. From solo practices to multi-city clinical networks without missing a beat.",
     },
     {
-      name: 'Espiritualidad',
-      imageSrc: 'https://i.ibb.co/hFYk92cQ/om33.png',
-      description: "La espiritualidad nos conecta con la esencia del universo, y la ciencia nos desvela sus secretos.",
+      name: 'Surgical Precision',
+      imageSrc: 'https://i.ibb.co/4L4Vt8b/design-variant.png',
+      description: "Eliminate administrative friction. Our intelligent automation orchestrates your clinical workflow, allowing you to focus exclusively on your patient's recovery.",
     },
     {
-      name: 'Tecnología',
-      imageSrc: 'https://i.ibb.co/mryjsDF4/monitor33.png',
-      description:
-        "La ciencia y la tecnología son solo una herramienta, pero puede ser utilizada para llevar a cabo grandes cosas cuando se combina con la sabiduría espiritual",
+      name: 'Bulletproof Security',
+      imageSrc: 'https://i.ibb.co/vvzFfWbJ/hacker33.png',
+      description: "Architectural Immunity. We build beyond encryption, engineering high-resilience digital frameworks where data integrity is absolute.",
     },
-  ]
+    
+]
   
-  const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  };
+const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
-  export default function Incentives() {
+export default function Incentives() {
     return (
       <div className="bg-black">
-        <div className="mx-auto  py-24  sm:py-32 l">
-          <div className="mx-auto max-w-2xl px-4 lg:max-w-none">
-            <div className="max-w-3xl">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-300">
-                Unificamos el conocimiento científico y espiritual para mejorar el bienestar del Cosmos en General
-              </h1>
-              <h1 className="mt-4 text-cyan-400">La tecnología es una extensión de nuestra capacidad humana, pero es nuestra sabiduría espiritual la que guía su uso para el bienestar de todos.</h1>
-              <h1 className="mt-4 text-cyan-400">La ciencia despierta nuestra curiosidad, la espiritualidad despierta nuestra conciencia</h1>
-              <h1 className="mt-4 text-cyan-400">En el despertar espiritual, el alma se encuentra con la conciencia y se dan cuenta de que son una y la misma.</h1>
+        <div className="mx-auto py-20 sm:py-32">
+          <div className="mx-auto max-w-7xl px-4">
+            {/* Contenedor de texto Centrado y en una sola línea */}
+            <div className="text-center mb-16 -mt-10 lg:-mt-14 relative z-10">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-300 sm:text-5xl lg:text-5xl">
+                Optimizing Healthcare Operations with <span style={{ color: 'cyan', textShadow: '0 0 15px #00FFFF' }}>Next-Gen SaaS</span>
+              </h2>
+              <p className="mt-6 text-cyan-400 font-medium italic text-lg">
+                Efficiency is not an option; it's a requirement in modern medicine.
+              </p>
+              <p className="mt-4 text-gray-500 max-w-4xl mx-auto text-base">
+                We bridge the gap between complex medical workflows and seamless digital experiences, 
+                ensuring that technology serves as a powerful extension of your clinical expertise.
+              </p>
             </div>
 
             <motion.div
-                className="mt-16 grid grid-cols-1 gap-y-10 gap-x-8 lg:grid-cols-3"
+                className="grid grid-cols-1 gap-y-12 gap-x-12 lg:grid-cols-3"
                 initial="hidden"
-                whileInView="visible" // Anima cuando el componente entra en la vista
-                viewport={{  amount: 0.3 }} // Solo se anima una vez y cuando el 30% del componente está visible
+                whileInView="visible"
+                viewport={{ amount: 0.3 }}
                 variants={{
                     visible: {
                         transition: {
-                            staggerChildren: 0.3 // Cada hijo aparece con un retraso de 0.2 segundos
+                            staggerChildren: 0.3 
                         }
                     }
                 }}
@@ -55,15 +59,23 @@ const incentives = [
               {incentives.map((incentive) => (
                 <motion.div
                     key={incentive.name}
-                    className="sm:flex lg:block"
-                    variants={itemVariants} // Aplica las variantes de animación al item
+                    className="flex flex-col items-center text-center p-6 rounded-2xl border border-transparent hover:border-gray-900 transition-all duration-300"
+                    variants={itemVariants}
                 >
-                  <div className="sm:flex-shrink-0">
-                    <img className="h-16 w-16" src={incentive.imageSrc} alt="" />
+                  <div className="flex-shrink-0 mb-6">
+                    <img 
+                        className="h-20 w-20 object-contain transition-all duration-300 transform hover:scale-125 hover:drop-shadow-[0_0_15px_rgba(0,255,255,0.8)]" 
+                        src={incentive.imageSrc} 
+                        alt={incentive.name} 
+                    />
                   </div>
-                  <div className="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0">
-                    <h3 className="text-sm font-medium text-gray-300">{incentive.name}</h3>
-                    <p className="mt-2 text-sm text-cyan-400">{incentive.description}</p>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-200 tracking-wider uppercase mb-3">
+                      {incentive.name}
+                    </h3>
+                    <p className="text-sm text-cyan-400 leading-relaxed">
+                      {incentive.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -73,7 +85,3 @@ const incentives = [
       </div>
     )
 }
-
-
-  
-  

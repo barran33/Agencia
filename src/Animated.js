@@ -3,7 +3,7 @@ import Error404 from "containers/errors/Error404";
 import Home from "containers/pages/Home";
 
 import Services from "containers/pages/Services";
-import About from "containers/pages/About";
+import Compliance from "containers/pages/Compliance";
 import Specialist from "containers/pages/Specialist"
 import Contact from "containers/pages/Contact";
 import Blog from "containers/pages/Blog";
@@ -13,13 +13,17 @@ import { AnimatePresence } from "framer-motion";
 import PostDetail from "containers/pages/PostDetail";
 import Optin from "containers/pages/Optin";
 import OptinCTA from "containers/pages/OptinCTA";
-import Universal from "containers/pages/cosmovisión/universal";
-import Cientifica from "containers/pages/cosmovisión/científica";
-import Espiritual from "containers/pages/cosmovisión/espiritual";
-import CosmoVisión from "containers/pages/Cosmovisión";
+
+// CORRECCIÓN DE IMPORTS
+import Universal from "containers/pages/cosmovisión/universal"; 
+import Aura from "containers/pages/cosmovisión/aura";
+import Espiritual from "containers/pages/cosmovisión/espiritual"; // Agregado el nombre del archivo
+import CosmoVisión from "containers/pages/Cosmovisión"; // Asegúrate que el archivo se llame exactamente así (C mayúscula)
+
 import Security from "containers/pages/services/development/Security";
-import DesarrolloWeb from "containers/pages/services/development/desarrollo_web";
-import Marketing from "containers/pages/services/development/Marketing";
+// Agregamos /pages/ a la ruta
+import SoftwareArchitecture from "containers/pages/services/development/SoftwareArchitecture";
+import AIDataIntelligence from "containers/pages/services/development/AIDataIntelligence";
 
 
 function Animated(){
@@ -27,33 +31,35 @@ function Animated(){
     return(
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
-            {/*Error Dsiplay*/}
+            {/*Error Display*/}
             <Route path="*" element={<Error404/>}/>
-            {/*Home Disply*/}
+            
+            {/*Home Display*/}
             <Route path="/" element={<Home/>}/>
-            <Route path="/cosmovisión" element={<CosmoVisión/>}/> 
-            <Route path="/cosmovisión/universal" element={<Universal/>}/> 
-            <Route path="/cosmovisión/científica" element={<Cientifica/>}/> 
-            <Route path="/cosmovisión/espiritual" element={<Espiritual/>}/> 
-            <Route path="/servicios/" element={<Services/>}/> 
-            <Route path="/servicios/bug_bounty" element={<Marketing/>}/>
-            <Route path="/servicios/security" element={<Security/>}/>  
-            <Route path="/servicios/desarrollo_web" element={<DesarrolloWeb/>}/> 
-            <Route path="/nosotros" element={<About/>}/> 
-            <Route path="/especialistas" element={<Specialist/>}/> 
+
+            {/* RUTAS DE SOLUCIONES (SaaS MÉDICO) */}
+            <Route path="/solutions" element={<CosmoVisión/>}/> 
+            <Route path="/solutions/aura" element={<Aura/>}/>
+            <Route path="/solutions/mindspace" element={<Universal/>}/> 
+            <Route path="/solutions/dental" element={<Espiritual/>}/> 
+
+            {/* SERVICIOS */}
+            <Route path="/services" element={<Services/>}/> 
+            <Route path="/services/ai-intelligence" element={<AIDataIntelligence/>}/>
+            <Route path="/services/security" element={<Security/>}/>  
+            <Route path="/services/software-architecture" element={<SoftwareArchitecture />}/>
+            {/* RESTO DE LA WEB */}
+            <Route path="/compliance" element={<Compliance/>}/> 
+            <Route path="/specialist" element={<Specialist/>}/> 
             <Route path="/blog" element={<Blog/>}/>
             <Route path="/blog/:slug" element={<PostDetail/>}/>
             <Route path="/search/:term" element={<Search />} />
             <Route path="/category/:slug" element={<Category />} /> 
-            <Route path="/contacto" element={<Contact/>}/>   
+            <Route path="/contact" element={<Contact/>}/>   
             <Route path="/ebook" element={<Optin/>}/> 
-           
-            
             
             </Routes>
         </AnimatePresence>
-
     )
 }
 export default Animated
-

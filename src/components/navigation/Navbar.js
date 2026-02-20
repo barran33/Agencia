@@ -1,206 +1,158 @@
 import { connect } from 'react-redux';
 import { Popover, Transition } from '@headlessui/react';
-// ELIMINADAS LAS IMPORTACIONES DE HEROICONS
-import { useState, Fragment } from 'react';
+import { useState, Fragment, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import logo_magic3 from 'assets/img/magic3.png'; 
 import { DotLoader } from 'react-spinners';
 
-// URLs de ejemplo para los iconos (¡REEMPLAZA CON TUS PROPIOS URLs DE PRODUCCIÓN!)
 const ICON_URLS = {
-  Space369: 'https://i.ibb.co/tTRJWGNC/space369.png', 
-  Service: 'https://i.ibb.co/SFGsfSQ/programming33.png', 
-  Identification: 'https://i.ibb.co/67gLS6Qw/group3.png',
-  ComputerDesktop: 'https://i.ibb.co/kVpJd3rS/specialist3.png', 
-  Blog: 'https://i.ibb.co/DDZpLHvK/blog333.png', 
-  ChatBubble: 'https://i.ibb.co/gMwCG7R6/contact333.png', 
+  Solutions: 'https://i.ibb.co/4RdGMdXn/opportunity.png', 
+  Services: 'https://i.ibb.co/F4NnVrgy/cloud-computing.png', 
+  Compliance: 'https://i.ibb.co/4npt83wv/compliance.png',
+  Experts: 'https://i.ibb.co/HLSYK4Md/experts33.png', 
+  Contact: 'https://i.ibb.co/v6S9dHrZ/communicate.png', 
 };
 
-const solutions = [
+const navigation = [
     {
-      name: 'Cosmovisión',
-      description: 'Observa nuestra forma de ver el mundo...',
-      href: '/cosmovisión',
-      iconUrl: ICON_URLS.Space369, // Usar URL en lugar del componente de icono
+      name: 'Solutions',
+      description: 'Specialized ecosystems for Private Clinics, Dental & Mental Health.',
+      href: '/solutions',
+      iconUrl: ICON_URLS.Solutions,
     },
     {
-      name: 'Servicios',
-      description: '  Mira nuestros servicios.',
-      href: '/servicios',
-      iconUrl: ICON_URLS.Service, // Usar URL
+      name: 'Services',
+      description: 'Custom software engineering and cloud infrastructure.',
+      href: '/services',
+      iconUrl: ICON_URLS.Services,
     },
     {
-      name: 'Nosotros',
-      description: 'Lee más sobre nostros.',
-      href: '/nosotros',
-      iconUrl: ICON_URLS.Identification, // Usar URL
+      name: 'Compliance',
+      description: 'Auditor-grade security and Law 8968 standards.',
+      href: '/compliance',
+      iconUrl: ICON_URLS.Compliance,
     },
     {
-      name: 'Especialistas',
-      description: 'Conoce nuestro grupo de profesionales.',
-      href: '/especialistas',
-      iconUrl: ICON_URLS.ComputerDesktop, // Usar URL
+      name: 'Experts',
+      description: 'Our elite team of developers and health-tech advisors.',
+      href: '/specialist',
+      iconUrl: ICON_URLS.Experts,
     },
     {
-      name: 'Blog',
-      description: 'Aprende más sobre Co§mic Imagiantion.',
-      href: '/blog',
-      iconUrl: ICON_URLS.Blog, // Usar URL
-    },
-    {
-      name: 'Contacto',
-      description: 'Contáctanos en un instante! ',
-      href: '/contacto',
-      iconUrl: ICON_URLS.ChatBubble, // Usar URL
+      name: 'Contact',
+      description: 'Ready to scale? Let’s talk about your project.',
+      href: '/contact',
+      iconUrl: ICON_URLS.Contact,
     },
   ];
 
 function Navbar(){
+    const [loading, setLoading] = useState(true);
+    const [scrolled, setScrolled] = useState(false);
 
-    const [loading,setLoading]=useState(true)
-
-    window.onscroll = function() {scrollFunction()}
-
-    function scrollFunction() {
-        if(document.getElementById('navbar')) {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.getElementById('navbar').classList.add('shadow-navbar');
-                document.getElementById('navbar').classList.add('bg-black');
-            }else{
-                document.getElementById('navbar').classList.remove('shadow-navbar');
-                document.getElementById('navbar').classList.remove('bg-black');
-            }
-        }
-    }
-
-    const [open, setOpen] = useState(false)
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return(
-        <nav id='navbar' className='w-full  py-4 top-0 transition duration ease-in-out z-30 fixed'>
-            <div className="px-4  sm:px-6">
-            <div className="-ml-4 -mt-2  hidden lg:flex flex-wrap items-center justify-between sm:flex-nowrap md:px-4 px-2">
-                    <Link to='/' className="ml-4 mt-2">
-                    <img
-                        src={'https://i.ibb.co/39SbjcZF/cm336.jpg'}
-                        width={210}
-                        height={210}
-                        className=""
-                        alt="Logo Magic3" // Siempre añade alt text para accesibilidad
-                    />
+        // Aumentado py-4 a py-6 para hacerlo más ancho
+        <nav id='navbar' className={`w-full py-6 top-0 transition-all duration-300 ease-in-out z-50 fixed ${scrolled ? 'bg-black/90 backdrop-blur-md shadow-lg border-b border-white/10 py-4' : 'bg-transparent'}`}>
+            <div className="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8"> {/* max-w-[90%] para usar más ancho de pantalla */}
+                
+                {/* Desktop Navbar */}
+                <div className="hidden lg:flex items-center justify-between">
+                    <Link to='/' className="flex-shrink-0">
+                        <img
+                            src={'https://i.ibb.co/4nKFXwbQ/logo33.jpg'}
+                            width={220} // Aumentado de 180 a 220
+                            className="hover:opacity-80 transition-opacity"
+                            alt="Cosmic Imagination Logo"
+                        />
                     </Link>
-                    <div className="ml-4 mt-2  flex-shrink-0">
-                    <NavLink to='/cosmovisión' className="text-lg inline-flex font-medium leading-6 text-cyan-300 border-b-2 border-transparent hover:border-cyan-500 transition duration-500 ease-in-out mx-5">Cosmovisión</NavLink>
-                    <NavLink to='/servicios' className="text-lg inline-flex font-medium leading-6 text-cyan-300 border-b-2 border-transparent hover:border-cyan-500 transition duration-500 ease-in-out mx-5">Servicios</NavLink>
-                    <NavLink to='/nosotros' className="text-lg inline-flex font-medium leading-6 text-cyan-300 border-b-2 border-transparent hover:border-cyan-500 transition duration-500 ease-in-out mx-5">Nosotros</NavLink>
-                    <NavLink to='/especialistas' className="text-lg inline-flex font-medium leading-6 text-cyan-300 border-b-2 border-transparent hover:border-cyan-500 transition duration-500 ease-in-out mx-5">Especialistas</NavLink>
-                    <NavLink to='/blog' className="text-lg inline-flex font-medium leading-6 text-cyan-300 border-b-2 border-transparent hover:border-cyan-500 transition duration-500 ease-in-out mx-5">Blog</NavLink>
-                    <NavLink to='/contacto' className="text-lg inline-flex font-medium leading-6 text-cyan-300 border-b-2 border-transparent hover:border-cyan-500 transition duration-500 ease-in-out mx-5">Contacto</NavLink>
+                    
+                    <div className="flex items-center space-x-4"> {/* Aumentado el espacio entre links */}
+                        {navigation.map((link) => (
+                            <NavLink 
+                                key={link.name}
+                                to={link.href} 
+                                // text-base es un poco más grande que text-sm
+                                className={({ isActive }) => `text-base font-bold px-5 py-2 rounded-full transition-all duration-300 ${isActive ? 'text-cyan-400 bg-cyan-400/10' : 'text-gray-200 hover:text-cyan-400 hover:bg-white/5'}`}
+                            >
+                                {link.name}
+                            </NavLink>
+                        ))}
 
-                    <Link
-                        to="/contacto"
-                        className="inline-flex ml-12 items-center rounded-md border border-transparent bg-cyan-400 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
-                    >
-                        Hire us
-                        <span className='px-2'>
-
-                        <DotLoader className="ml-3 -mr-1 h-5 w-5" loading={loading} size={20} color="#f2f2f2" />
-                        </span>
-                    </Link>
+                        <Link
+                            to="/contact"
+                            // Aumentado padding y font-size del botón
+                            className="ml-8 inline-flex items-center rounded-full bg-cyan-400 px-8 py-3 text-lg font-black text-black hover:bg-cyan-300 transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.4)]"
+                        >
+                            Hire us
+                            <DotLoader className="ml-3" loading={loading} size={18} color="#000000" />
+                        </Link>
                     </div>
                 </div>
-                {/* Mobile Navbar */}
-                <div className="-ml-4 -mt-2 lg:hidden flex flex-wrap items-center justify-between sm:flex-nowrap md:px-4 px-2">
-                    <Link to='/' className="ml-4 mt-3">
-                    <img
-                        src={'https://i.ibb.co/39SbjcZF/cm336.jpg'}
-                        width={210}
-                        height={210}
-                        className=""
-                        alt="Logo Magic3" // Siempre añade alt text para accesibilidad
-                    />
-                    </Link>
-                    <div className="ml-4 mt-2 flex-shrink-0">
-                      <Popover className="relative">
-                          {({ open }) => (
-                          <>
-                              <Popover.Button
-                              className={`
-                                  ${open ? '' : 'text-opacity-90'}
-                                  focus:ring-none focus:outline-none`}
-                              >
-                              {
-                                  open ?
-                                  <i  className='bx  text-cyan-300 bx-x text-4xl mt-1'></i>
-                                  :
-                                  <i  className='bx bx-menu  text-cyan-300 text-4xl mt-1'></i>
-                              }
-                              </Popover.Button>
 
-                              <Transition
-                              as={Fragment}
-                              enter="transition ease-out duration-200"
-                              enterFrom="opacity-0 translate-y-1"
-                              enterTo="opacity-100 translate-y-0"
-                              leave="transition ease-in duration-150"
-                              leaveFrom="opacity-100 translate-y-0"
-                              leaveTo="opacity-0 translate-y-1"
-                              >
-                              <Popover.Panel className="absolute -left-32 z-10 mt-3 w-screen max-w-sm -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-3xl">
-                                  <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                  <div className="relative grid gap-8 bg-black p-7 lg:grid-cols-2">
-                                      {solutions.map((item) => (
-                                      <Link
-                                          key={item.name}
-                                          to={item.href}
-                                          className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-cyan-200 focus:outline-none focus-visible:ring focus-visible:ring-cyan-500 focus-visible:ring-opacity-50"
-                                      >
-                                          <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-cyan-400 rounded-md text-cyan sm:h-12 sm:w-12">
-                                          {/* CAMBIO CLAVE AQUÍ: Usamos <img> en lugar de <item.icon /> */}
-                                          <img src={item.iconUrl} alt={`${item.name} icon`} className="h-10 w-10" aria-hidden="true" />
-                                          </div>
-                                          <div className="ml-4">
-                                          <p className="text-sm font-medium text-cyan-500">
-                                              {item.name}
-                                          </p>
-                                          <p className="text-sm text-gray-400">
-                                              {item.description}
-                                          </p>
-                                          </div>
-                                      </Link>
-                                      ))}
-                                  </div>
-                                  <div className="bg-cyan-300 p-4">
-                                      <a
-                                      href="##"
-                                      className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-cyan-500 focus-visible:ring-opacity-50"
-                                      >
-                                      <span className="flex items-center">
-                                          <span className="text-sm font-medium text-gray-900">
-                                          Documentation
-                                          </span>
-                                      </span>
-                                      <span className="block  text-sm text-black"> {/* Cambiado de Black a black (minúscula) */}
-                                          Start integrating products and tools
-                                      </span>
-                                      </a>
-                                  </div>
-                                  </div>
-                              </Popover.Panel>
-                              </Transition>
-                          </>
-                          )}
-                      </Popover>
-                    </div>
+                {/* Mobile Navbar */}
+                <div className="lg:hidden flex items-center justify-between">
+                    <Link to='/'>
+                        <img src={'https://i.ibb.co/4nKFXwbQ/logo33.jpg'} width={180} alt="Logo" /> {/* Logo móvil un poco más grande */}
+                    </Link>
+                    
+                    <Popover className="relative">
+                        {({ open }) => ( // Aseguramos que open esté disponible aquí
+                        <>
+                            <Popover.Button className="text-cyan-400 p-2 focus:outline-none">
+                                <i className={`bx ${open ? 'bx-x' : 'bx-menu'} text-5xl`}></i>
+                            </Popover.Button>
+
+                            <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-200"
+                                enterFrom="opacity-0 translate-y-1"
+                                enterTo="opacity-100 translate-y-0"
+                                leave="transition ease-in duration-150"
+                                leaveFrom="opacity-100 translate-y-0"
+                                leaveTo="opacity-0 translate-y-1"
+                            >
+                                <Popover.Panel className="absolute right-0 z-50 mt-4 w-screen max-w-sm transform px-4">
+                                    <div className="overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl ring-1 ring-white/20">
+                                        <div className="relative grid gap-6 p-6">
+                                            {navigation.map((item) => (
+                                                <Link
+                                                    key={item.name}
+                                                    to={item.href}
+                                                    className="-m-3 flex items-center rounded-xl p-3 transition duration-150 ease-in-out hover:bg-white/5"
+                                                >
+                                                    <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-cyan-400/20 rounded-lg text-cyan-400">
+                                                        <img src={item.iconUrl} alt={item.name} className="h-8 w-8 brightness-125" />
+                                                    </div>
+                                                    <div className="ml-4">
+                                                        <p className="text-lg font-bold text-white">{item.name}</p>
+                                                        <p className="text-sm text-gray-400">{item.description}</p>
+                                                    </div>
+                                                </Link>
+                                            ))}
+                                        </div>
+                                        <div className="bg-cyan-400 p-5">
+                                            <Link to="/contact" className="flex items-center justify-center font-black text-black text-base uppercase tracking-wider">
+                                                Start Transformation
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </Popover.Panel>
+                            </Transition>
+                        </>
+                        )}
+                    </Popover>
                 </div>
             </div>
         </nav>
     )
 }
-const mapStateToProps=state=>({
 
-})
-
-export default connect(mapStateToProps, {
-
-}) (Navbar)
-
+const mapStateToProps = state => ({});
+export default connect(mapStateToProps, {})(Navbar);
