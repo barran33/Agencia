@@ -225,16 +225,22 @@ DJOSER = {
 
 AUTH_USER_MODEL = 'user.UserAccount'
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3001',
-    'http://localhost:3000',
+
+
+CORS_ALLOWED_ORIGINS = [
+    "https://cosmic-imagination.com",
+    "https://www.cosmic-imagination.com",
 ]
+
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = False
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:3001',
-    'http://localhost:3000',
+    'https://cosmic-imagination.com',
+    'https://www.cosmic-imagination.com',
 ]
+
+
 
 
 CSRF_COOKIE_SAMESITE = 'None'

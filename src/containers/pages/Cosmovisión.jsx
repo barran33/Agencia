@@ -18,7 +18,7 @@ const solutions = [
     },
     {
         id: 'mindspace',
-        title: 'Cognitive Aegis',
+        title: 'MindSpace Insight',
         category: 'Mental Health',
         description: 'Transcending standard encryption to provide a sanctuary for mental health intelligence. We implement a sovereign data architecture that shields the most sensitive psychiatric insights with absolute integrity.',
         img: 'https://i.ibb.co/S4GF9Xr8/cerebro.jpg',

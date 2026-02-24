@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect  } from 'react';
 import Navbar from "components/navigation/Navbar";
 import Layout from "hocs/layouts/Layout";
 import Footer from "components/navigation/Footer";
@@ -25,6 +25,10 @@ export default function Contact() {
     headers: { 'Content-Type': 'application/json' },
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleChange = e => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
@@ -36,11 +40,13 @@ export default function Contact() {
   const fetchData = async () => {
     setLoading(true);
     try {
+      // Cambio aplicado: Enviamos formData directamente y Axios gestiona el JSON
       const res = await axios.post(
         `${process.env.REACT_APP_API_URL}/api/contacts/`,
-        JSON.stringify(formData),
+        formData, 
         config
       );
+      
       alert('Message sent successfully!');
       setFormData({
         name: '',
@@ -52,6 +58,8 @@ export default function Contact() {
         acceptedTerms: false,
       });
     } catch (err) {
+      // Cambio aplicado: Log detallado para depuración en desarrollo
+      console.error("Error details:", err.response ? err.response.data : err.message);
       alert('An error occurred while sending. Please check the console.');
     } finally {
       setLoading(false);

@@ -70,7 +70,7 @@ function Header() {
 
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <Link
-                            to="/services"
+                            to="/solutions"
                             className="rounded-md bg-cyan-500 px-6 py-3 text-sm font-semibold text-black shadow-[0_0_15px_rgba(0,255,255,0.4)] hover:bg-cyan-400 transition-all"
                         >
                             Our Solutions

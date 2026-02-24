@@ -15,9 +15,9 @@ import Optin from "containers/pages/Optin";
 import OptinCTA from "containers/pages/OptinCTA";
 
 // CORRECCIÓN DE IMPORTS
-import Universal from "containers/pages/cosmovisión/universal"; 
+import Mind from "containers/pages/cosmovisión/mind"; 
 import Aura from "containers/pages/cosmovisión/aura";
-import Espiritual from "containers/pages/cosmovisión/espiritual"; // Agregado el nombre del archivo
+import Dental from "containers/pages/cosmovisión/dental"; // Agregado el nombre del archivo
 import CosmoVisión from "containers/pages/Cosmovisión"; // Asegúrate que el archivo se llame exactamente así (C mayúscula)
 
 import Security from "containers/pages/services/development/Security";
@@ -40,8 +40,8 @@ function Animated(){
             {/* RUTAS DE SOLUCIONES (SaaS MÉDICO) */}
             <Route path="/solutions" element={<CosmoVisión/>}/> 
             <Route path="/solutions/aura" element={<Aura/>}/>
-            <Route path="/solutions/mindspace" element={<Universal/>}/> 
-            <Route path="/solutions/dental" element={<Espiritual/>}/> 
+            <Route path="/solutions/mindspace" element={<Mind/>}/> 
+            <Route path="/solutions/dental" element={<Dental/>}/> 
 
             {/* SERVICIOS */}
             <Route path="/services" element={<Services/>}/> 
